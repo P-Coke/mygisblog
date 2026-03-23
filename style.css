@@ -98,6 +98,8 @@ img {
   color: #8190a2;
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.76rem;
+  position: relative;
+  padding-left: 18px;
 }
 
 .paper-site-brand {
@@ -105,6 +107,29 @@ img {
   align-items: baseline;
   gap: 14px;
   flex-wrap: wrap;
+}
+
+.paper-site-brand__subtitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 8px;
+  height: 1px;
+  background: rgba(129, 144, 162, 0.72);
+  transform: translateY(-50%);
+}
+
+.paper-site-brand__subtitle::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(129, 144, 162, 0.76);
+  transform: translateY(-50%);
 }
 
 .paper-site-nav,
@@ -764,6 +789,18 @@ img {
 
   .paper-site-brand {
     gap: 6px;
+  }
+
+  .paper-site-brand__subtitle {
+    padding-left: 14px;
+  }
+
+  .paper-site-brand__subtitle::before {
+    width: 6px;
+  }
+
+  .paper-site-brand__subtitle::after {
+    left: 8px;
   }
 
   .paper-dashboard,
