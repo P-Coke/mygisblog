@@ -46,9 +46,9 @@ $article_query = new WP_Query(
 	<section class="paper-main-column">
 		<section class="paper-panel paper-hero">
 			<p class="paper-kicker">Pcoke / zqlovegis.cn</p>
-			<h1>关于地图、遥感与代码的个人笔记</h1>
-			<p class="paper-english-desc">Personal notes on GIS, remote sensing, coding, and the work behind them.</p>
-			<p class="paper-lead">这里主要写我平时在做和在学的内容：Python for GIS、生态遥感、WebGIS、小工具开发、Linux 折腾，以及项目推进过程中遇到的问题、思路和复盘。它首先是个人博客，其次才是作品展示。</p>
+			<h1>这儿主要写点和地图、遥感、代码有关的东西</h1>
+			<p class="paper-english-desc">A personal blog about GIS, remote sensing, coding, and everyday work.</p>
+			<p class="paper-lead">平时做项目、写代码、处理数据的时候，总会踩到不少坑，也会冒出一些想法。这个站点就是拿来记这些东西的，写得会比较杂一点，但基本都跟 GIS、遥感、WebGIS、Linux 和小工具开发有关。</p>
 			<div class="paper-action-buttons">
 				<a class="paper-btn paper-btn--primary" href="#articles">进入文章</a>
 				<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($about_url); ?>">了解我</a>
@@ -57,46 +57,46 @@ $article_query = new WP_Query(
 
 		<section class="paper-intro-grid" aria-label="首页摘要">
 			<section class="paper-panel paper-mini-panel">
-				<span class="paper-label">研究方向</span>
-				<h2>我主要关注什么</h2>
-				<p>当前工作重点放在生态遥感、多源卫星数据分析、火点监测、土壤侵蚀估算，以及人类活动强度与区域生态变化之间的关系。</p>
+				<span class="paper-label">最近在看</span>
+				<h2>这段时间主要折腾什么</h2>
+				<p>最近花得比较多的时间还是在生态遥感、多源卫星数据、火点监测，还有土壤侵蚀估算这些方向上。有些是课程和研究里的东西，有些是自己真感兴趣想继续往下挖的。</p>
 			</section>
 
 			<section class="paper-panel paper-mini-panel">
-				<span class="paper-label">工程能力</span>
-				<h2>我如何把研究做成系统</h2>
-				<p>我更偏向把研究问题工程化处理：用 Python 和 GIS 工具组织数据流程，用 WebGIS 或服务端接口做可复用的系统，再用地图和界面把结果清楚表达出来。</p>
+				<span class="paper-label">平时怎么做</span>
+				<h2>我更习惯边做边记</h2>
+				<p>我不太喜欢把东西只停在“跑通一次”这个阶段。能整理成脚本的就整理成脚本，能做成接口或小工具的就继续往下做，顺手把过程记下来，后面自己回头看也方便。</p>
 			</section>
 		</section>
 
 		<section class="paper-panel paper-focus">
-			<span class="paper-label">Current Focus</span>
-			<h2>近期重点</h2>
+			<span class="paper-label">最近在忙</span>
+			<h2>手头几件事</h2>
 			<div class="paper-focus-list">
 				<div class="paper-focus-item">
 					<strong>Himawari-8/9 火点监测</strong>
-					<p>围绕静止气象卫星开展实时火点识别、热异常追踪与自动化处理。</p>
+					<p>主要在看怎么把静止气象卫星的数据真正用起来，做成比较稳定的火点识别和自动处理流程。</p>
 				</div>
 				<div class="paper-focus-item">
 					<strong>RUSLE / CSLE 土壤侵蚀估算</strong>
-					<p>把模型计算、空间因子组织和区域尺度表达整合进统一分析流程。</p>
+					<p>一边补模型和方法，一边琢磨怎么把空间因子整理得更清楚，最后算出来的结果也更像回事。</p>
 				</div>
 				<div class="paper-focus-item">
-					<strong>WebGIS 与研究型工具</strong>
-					<p>把遥感分析、空间接口和前端表达做成真正可展示、可复用的应用。</p>
+					<strong>WebGIS 和一些小工具</strong>
+					<p>有些东西光分析还不够，我还是想把它做成能看、能点、能继续用的小系统，而不是只留在脚本里。</p>
 				</div>
 			</div>
 		</section>
 
 		<section class="paper-panel paper-lab">
-			<span class="paper-label">The Lab</span>
-			<h2>Live Demo: 葵花卫星火点实时监测</h2>
-			<p>这里会放置我正在推进的实验型项目。相比普通作品展示，我更想把研究思路、处理流程、接口能力和最终表达放在同一个页面里。</p>
-			<a class="paper-lab-link" href="<?php echo esc_url($lab_url); ?>" target="_blank" rel="noreferrer">进入独立实验舱 →</a>
+			<span class="paper-label">实验小站</span>
+			<h2>葵花卫星火点监测</h2>
+			<p>这个位置以后会放我正在做的一些实验页面。和博客文章不一样，这里更偏“边做边试”，会放一些还在打磨中的东西。</p>
+			<a class="paper-lab-link" href="<?php echo esc_url($lab_url); ?>" target="_blank" rel="noreferrer">进去看看 →</a>
 		</section>
 
 		<section id="articles" class="paper-panel paper-articles">
-			<span class="paper-label">Latest Writing</span>
+			<span class="paper-label">最近更新</span>
 			<h2>最近文章</h2>
 
 			<?php if ($article_query->have_posts()) : ?>
@@ -123,13 +123,13 @@ $article_query = new WP_Query(
 
 	<aside class="paper-sidebar" aria-label="<?php esc_attr_e('Sidebar', 'zqlovegis-theme'); ?>">
 		<section class="paper-panel">
-			<span class="paper-label">Profile</span>
+			<span class="paper-label">关于我</span>
 			<div class="paper-profile-head">
 				<img class="paper-profile-avatar" src="<?php echo esc_url($github_avatar); ?>" alt="Pcoke GitHub Avatar">
 			</div>
 			<h2>Pcoke</h2>
 			<p class="paper-real-name">张琦</p>
-			<p class="paper-bio">太原理工大学 · 测绘工程<br>本科阶段，关注生态遥感与空间信息工程</p>
+			<p class="paper-bio">太原理工大学 · 测绘工程<br>平时主要在遥感、GIS 和开发之间来回切换</p>
 			<div class="paper-tags">
 				<span>Python</span>
 				<span>FastAPI</span>
@@ -140,7 +140,7 @@ $article_query = new WP_Query(
 		</section>
 
 		<section class="paper-panel">
-			<span class="paper-label">GitHub Activity</span>
+			<span class="paper-label">GitHub</span>
 			<div class="paper-github-card">
 				<img src="/api/github-stats" alt="GitHub Statistics">
 			</div>
@@ -150,21 +150,21 @@ $article_query = new WP_Query(
 		</section>
 
 		<section class="paper-panel">
-			<span class="paper-label">Taxonomy</span>
+			<span class="paper-label">平时会写</span>
 			<div class="paper-track">
-				<span class="paper-track-id">Track A</span>
+				<span class="paper-track-id">一</span>
 				<strong>生态遥感</strong>
-				<p>围绕火点监测、生态变化识别和多源遥感分析组织研究流程。</p>
+				<p>像火点监测、多源遥感数据处理、生态变化分析这些内容，后面应该会慢慢写得比较多。</p>
 			</div>
 			<div class="paper-track">
-				<span class="paper-track-id">Track B</span>
+				<span class="paper-track-id">二</span>
 				<strong>空间数据工程</strong>
-				<p>用 Python、GDAL、数据库和自动化脚本把数据链路真正跑通。</p>
+				<p>比如 Python、GDAL、数据库、脚本处理流程，主要是一些真正做事时会碰到的问题和整理方法。</p>
 			</div>
 			<div class="paper-track">
-				<span class="paper-track-id">Track C</span>
+				<span class="paper-track-id">三</span>
 				<strong>WebGIS 与系统实现</strong>
-				<p>把分析接口、地图表达和前端交互整合成研究型应用。</p>
+				<p>还有 WebGIS、接口、小工具、部署这些偏工程的东西，我也会记，毕竟很多时候真正花时间的都在这部分。</p>
 			</div>
 		</section>
 	</aside>
@@ -172,7 +172,7 @@ $article_query = new WP_Query(
 
 <footer class="paper-site-footer">
 	<div class="paper-site-footer__inner">
-		<p>记录遥感、Python for GIS、WebGIS 与测绘工程笔记。这里首先是博客与研究记录，其次才是个人主页。</p>
+		<p>这里就是一个慢慢更新的个人博客。写得不会特别快，但基本都会是我自己真的做过、想过、折腾过的东西。</p>
 		<div class="paper-site-footer__links">
 			<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
 			<a href="mailto:hello@zqlovegis.cn">Email</a>

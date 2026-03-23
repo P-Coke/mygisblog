@@ -35,36 +35,36 @@ $home_url = home_url('/');
 
 <main class="paper-about">
 	<section class="paper-panel paper-about-hero">
-		<span class="paper-label">About</span>
+		<span class="paper-label">关于</span>
 		<div class="paper-profile-head">
 			<img class="paper-profile-avatar" src="<?php echo esc_url($github_avatar); ?>" alt="Pcoke GitHub Avatar">
 		</div>
 		<h1>关于我</h1>
-		<p class="paper-lead">我是张琦，常用网名 Pcoke，目前就读于太原理工大学测绘工程专业。本科阶段的兴趣主要集中在生态遥感、空间信息工程、WebGIS 系统实现，以及如何把研究问题转化为真正可运行的工具和流程。</p>
+		<p class="paper-lead">我是张琦，平时更常用 Pcoke 这个名字。目前在太原理工大学读测绘工程。这个页面不想写得太像简历，就简单说说我平时在做什么、在关心什么。</p>
 	</section>
 
 	<section class="paper-about-grid">
 		<section class="paper-panel">
-			<span class="paper-label">Research Focus</span>
+			<span class="paper-label">我在关注</span>
 			<h2>研究兴趣</h2>
 			<div class="paper-track">
 				<strong>生态遥感</strong>
-				<p>关注多源卫星数据在环境监测和生态变化分析中的应用，尤其关心时序观测、区域尺度分析和结果表达。</p>
+				<p>我对多源卫星数据一直挺感兴趣，尤其是它们怎么被用在环境监测和生态变化分析里，而不是只停留在“看图”和“出图”这一步。</p>
 			</div>
 			<div class="paper-track">
 				<strong>火点监测</strong>
-				<p>当前重点包括基于 Himawari-8/9 的实时火点监测、热异常识别，以及相关处理流程的自动化组织。</p>
+				<p>现在比较想往下做的是 Himawari-8/9 火点监测，包括实时识别、热异常判断，还有后面的自动处理流程。</p>
 			</div>
 			<div class="paper-track">
 				<strong>土壤侵蚀与生态评估</strong>
-				<p>围绕 RUSLE、CSLE 以及人类活动强度等方向，尝试把模型计算与空间分析真正结合起来。</p>
+				<p>RUSLE、CSLE、人类活动强度这些方向我也一直在接触，主要还是想把模型、空间分析和最后的表达真正连起来。</p>
 			</div>
 		</section>
 
 		<section class="paper-panel">
-			<span class="paper-label">Engineering</span>
+			<span class="paper-label">我平时怎么做</span>
 			<h2>技术与实现</h2>
-			<p>我不是只停留在分析和做图层面。相比单一脚本，我更希望把数据处理、接口服务、数据库、地图表达和前端交互串成完整系统。</p>
+			<p>相比只把分析跑通一次，我更喜欢把东西继续往下做。能写成脚本的就写成脚本，能做成接口的就做成接口，能顺手做个页面或小工具的，也会尽量补上。</p>
 			<div class="paper-tags">
 				<span>Python</span>
 				<span>FastAPI</span>
@@ -79,14 +79,14 @@ $home_url = home_url('/');
 	</section>
 
 	<section class="paper-panel">
-		<span class="paper-label">Work Style</span>
-		<h2>我希望这个站点呈现什么</h2>
-		<p>这个站点不只是展示“我会什么”，更想呈现“我是如何工作”的。这里会持续记录研究问题的拆解方式、空间数据处理流程、WebGIS 原型、部署经验，以及我对地图表达和技术写作的判断。</p>
-		<p>如果你是通过这个站点认识我，我希望你看到的是一个愿意把研究和工程同时做扎实的人：既能写分析脚本，也能设计接口、部署服务，并把结果表达成别人读得懂、用得上的形式。</p>
+		<span class="paper-label">为什么要写这个站</span>
+		<h2>这个博客想留下什么</h2>
+		<p>我一直觉得，很多真正有用的东西都藏在过程里，比如一个数据怎么清、一个脚本怎么改、一个页面为什么最后长成这样。这些东西如果不记，过一阵就忘了。</p>
+		<p>所以这个站点对我来说更像一本长期更新的工作笔记。它不一定每篇都很正式，但我希望尽量写自己真的做过的东西，而不是拼一些看起来很完整、其实没什么内容的介绍。</p>
 	</section>
 
 	<section class="paper-panel">
-		<span class="paper-label">Links</span>
+		<span class="paper-label">链接</span>
 		<h2>站点与链接</h2>
 		<div class="paper-about-links">
 			<a class="paper-btn paper-btn--primary" href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">访问 GitHub</a>
@@ -97,7 +97,7 @@ $home_url = home_url('/');
 
 <footer class="paper-site-footer">
 	<div class="paper-site-footer__inner">
-		<p>记录遥感、Python for GIS、WebGIS 与测绘工程笔记。这里首先是博客与研究记录，其次才是个人主页。</p>
+		<p>这里会慢慢更新一些我自己关心、也确实花时间做过的内容。写得不一定快，但尽量都是真东西。</p>
 		<div class="paper-site-footer__links">
 			<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
 			<a href="mailto:hello@zqlovegis.cn">Email</a>
