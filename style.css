@@ -58,10 +58,15 @@ body {
 }
 
 .dashboard-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(280px, 3fr);
-  gap: 34px;
+  display: grid !important;
+  grid-template-columns: 7fr 3fr !important;
+  gap: 48px !important;
   align-items: start;
+  max-width: 1200px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .dashboard-main,
@@ -70,18 +75,20 @@ body {
 }
 
 .dashboard-sidebar {
-  position: sticky;
-  top: 28px;
-  display: grid;
-  gap: 18px;
+  position: sticky !important;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: auto;
 }
 
 .hero-panel {
   position: relative;
-  border: 1px solid rgba(154, 209, 255, 0.14);
-  border-radius: 22px;
+  border: 1px solid #e8e6df;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 16px 34px rgba(3, 9, 20, 0.09);
+  box-shadow: 0 2px 12px rgba(9, 17, 31, 0.03);
   background:
     linear-gradient(135deg, rgba(5, 12, 24, 0.78) 0%, rgba(8, 17, 29, 0.66) 34%, rgba(10, 20, 34, 0.46) 100%),
     radial-gradient(circle at 20% 28%, rgba(154, 209, 255, 0.09), transparent 24%),
@@ -169,26 +176,27 @@ body {
 
 .stack-chip {
   display: inline-block;
-  padding: 7px 11px;
-  border-radius: 999px;
-  background: rgba(17, 38, 61, 0.04);
-  border: 1px solid rgba(17, 38, 61, 0.1);
-  color: var(--gis-ocean);
-  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: #f0f0f0;
+  border: 1px solid rgba(17, 38, 61, 0.08);
+  color: #333;
+  font-size: 0.85em;
 }
 
 .sidebar-card,
 .lab-card {
-  border: 1px solid var(--gis-border);
-  border-radius: 18px;
-  background: var(--gis-panel);
-  box-shadow: var(--gis-shadow);
+  border: 1px solid #e8e6df;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 2px 12px rgba(9, 17, 31, 0.03);
 }
 
 .taxonomy-chip-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .lab-card {
@@ -284,8 +292,10 @@ body {
 }
 
 .github-card-figure {
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 4px;
   border: 1px solid rgba(9, 17, 31, 0.08);
   background: rgba(255, 255, 255, 0.7);
 }
@@ -334,12 +344,13 @@ body {
 
 @media (max-width: 980px) {
   .dashboard-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
   }
 
   .dashboard-sidebar {
-    position: static;
+    position: relative !important;
+    top: 0;
   }
 
   .article-list-date {
