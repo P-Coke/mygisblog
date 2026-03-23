@@ -100,12 +100,12 @@ $article_query = new WP_Query(
 			<p class="paper-real-name">张琦</p>
 			<p class="paper-bio">太原理工大学 · 测绘工程</p>
 			<p class="paper-profile-note">比起把事情做完，我更在意它能不能留下来，能不能继续被修改，能不能说得明白。</p>
-			<div class="paper-tags">
-				<span>Python</span>
-				<span>FastAPI</span>
-				<span>GDAL</span>
-				<span>C#</span>
-				<span>PostgreSQL</span>
+			<div class="paper-skill-badge-list">
+				<?php echo zqlovegis_render_skill_badge('python', 'Python'); ?>
+				<?php echo zqlovegis_render_skill_badge('fastapi', 'FastAPI'); ?>
+				<?php echo zqlovegis_render_skill_badge('gdal', 'GDAL'); ?>
+				<?php echo zqlovegis_render_skill_badge('csharp', 'C#'); ?>
+				<?php echo zqlovegis_render_skill_badge('postgresql', 'PostgreSQL'); ?>
 			</div>
 		</section>
 
