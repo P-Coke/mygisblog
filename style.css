@@ -37,6 +37,10 @@ body {
   color: var(--gis-ink);
 }
 
+body.pcoke-dashboard-page {
+  background: #f6f4ef;
+}
+
 .wp-site-blocks {
   min-height: 100vh;
 }
@@ -342,6 +346,338 @@ body {
   border-top: 1px solid var(--gis-border);
 }
 
+/* =========================================
+   ZQLoveGIS 首页仪表盘 核心 CSS
+   ========================================= */
+
+.pcoke-site-header,
+.pcoke-site-footer {
+  width: min(1140px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.pcoke-site-header {
+  padding: 26px 0 6px;
+}
+
+.pcoke-site-header__inner,
+.pcoke-site-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.pcoke-site-title {
+  margin: 0;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #09111f;
+}
+
+.pcoke-site-subtitle {
+  margin: 4px 0 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  color: rgba(9, 17, 31, 0.56);
+}
+
+.pcoke-site-nav,
+.pcoke-site-footer__links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pcoke-site-nav a,
+.pcoke-site-footer__links a {
+  color: #09111f;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.pcoke-site-nav a:hover,
+.pcoke-site-footer__links a:hover {
+  text-decoration: underline;
+}
+
+.pcoke-dashboard-wrapper {
+  font-family: "Noto Sans SC", "Microsoft YaHei UI", sans-serif;
+  color: #09111f;
+  background-color: #f6f4ef;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 28px auto 40px;
+  padding: 0 20px;
+}
+
+.pcoke-main-content,
+.pcoke-sidebar {
+  min-width: 0;
+}
+
+.pcoke-panel {
+  background: #ffffff;
+  border: 1px solid #e8e6df;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.pcoke-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(5, 12, 24, 0.8) 0%, rgba(8, 17, 29, 0.66) 34%, rgba(10, 20, 34, 0.48) 100%),
+    radial-gradient(circle at 20% 28%, rgba(154, 209, 255, 0.09), transparent 24%),
+    radial-gradient(circle at 78% 18%, rgba(95, 117, 95, 0.12), transparent 18%),
+    var(--hero-night-image),
+    linear-gradient(180deg, #07101c 0%, #0d1b2f 100%);
+  background-size: cover;
+  background-position: center center;
+  color: #ffffff;
+}
+
+.pcoke-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(202, 211, 222, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(202, 211, 222, 0.08) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.12));
+  pointer-events: none;
+}
+
+.pcoke-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.pcoke-sidebar {
+  position: sticky;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pcoke-dashboard-wrapper h1,
+.pcoke-dashboard-wrapper h2,
+.pcoke-dashboard-wrapper h3 {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.pcoke-dashboard-wrapper h1 {
+  font-size: clamp(1.8rem, 3vw, 2.45rem);
+}
+
+.pcoke-dashboard-wrapper h2 {
+  font-size: 1.45rem;
+}
+
+.pcoke-dashboard-wrapper h3 {
+  font-size: 1.08rem;
+}
+
+.label {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8190a2;
+  margin-bottom: 12px;
+}
+
+.kicker {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.english-desc {
+  color: rgba(255, 255, 255, 0.76);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.lead {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #09111f;
+  color: #fff;
+}
+
+.btn-outline {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.lab-link {
+  color: #09111f;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(9, 17, 31, 0.2);
+}
+
+.lab-link:hover {
+  border-bottom-color: #09111f;
+}
+
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-item {
+  display: flex;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e8e6df;
+}
+
+.article-item:last-child {
+  border-bottom: none;
+}
+
+.article-date {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  color: #8190a2;
+  flex-shrink: 0;
+  width: 100px;
+}
+
+.article-info {
+  min-width: 0;
+}
+
+.article-info h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.article-info h3 a {
+  color: #09111f;
+  text-decoration: none;
+}
+
+.article-info h3 a:hover {
+  text-decoration: underline;
+}
+
+.article-info p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.real-name {
+  margin: -8px 0 10px;
+  color: #555;
+}
+
+.bio {
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.tags span {
+  background: #f4f7fb;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  border: 1px solid #e8e6df;
+}
+
+.github-stats img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.github-stats img + img {
+  margin-top: 14px;
+}
+
+.track {
+  margin-bottom: 16px;
+}
+
+.track:last-child {
+  margin-bottom: 0;
+}
+
+.track strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.track p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.track-id {
+  font-size: 12px;
+  color: #007cba;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.pcoke-site-footer {
+  padding: 6px 0 34px;
+}
+
+.pcoke-site-footer__inner {
+  padding-top: 20px;
+  border-top: 1px solid #e8e6df;
+}
+
+.pcoke-site-footer p {
+  margin: 0;
+  color: #555;
+  max-width: 54rem;
+}
+
 @media (max-width: 980px) {
   .dashboard-layout {
     grid-template-columns: 1fr !important;
@@ -356,5 +692,27 @@ body {
   .article-list-date {
     padding-right: 0;
     margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pcoke-dashboard-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pcoke-sidebar {
+    position: relative;
+    top: 0;
+  }
+
+  .article-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .pcoke-site-header__inner,
+  .pcoke-site-footer__inner {
+    flex-direction: column;
   }
 }
