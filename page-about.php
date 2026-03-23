@@ -25,8 +25,20 @@ $home_url = home_url('/');
 		<div class="paper-profile-head paper-profile-head--compact">
 			<img class="paper-profile-avatar" src="<?php echo esc_url($github_avatar); ?>" alt="Pcoke GitHub Avatar">
 			<div class="paper-profile-links">
-				<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer"><?php echo zqlovegis_render_icon('github'); ?>GitHub</a>
-				<a href="mailto:hello@zqlovegis.cn"><?php echo zqlovegis_render_icon('email'); ?>邮箱</a>
+				<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">
+					<?php echo zqlovegis_render_icon('github'); ?>
+					<span class="paper-profile-link-text">
+						<strong>GitHub</strong>
+						<small>github.com/P-Coke</small>
+					</span>
+				</a>
+				<a href="mailto:hello@zqlovegis.cn">
+					<?php echo zqlovegis_render_icon('email'); ?>
+					<span class="paper-profile-link-text">
+						<strong>邮箱</strong>
+						<small>hello@zqlovegis.cn</small>
+					</span>
+				</a>
 			</div>
 		</div>
 		<h1>关于我</h1>
@@ -56,15 +68,40 @@ $home_url = home_url('/');
 			<span class="paper-label">我平时怎么做</span>
 			<h2>技术与实现</h2>
 			<p>我做事的习惯一直比较慢，也比较拧。相比只把分析跑通一次，我更喜欢继续往下做一点，看看它能不能变成脚本、接口、页面，或者一个以后还能继续改的小工具。</p>
-			<div class="paper-tags">
-				<span>Python</span>
-				<span>FastAPI</span>
-				<span>GDAL</span>
-				<span>PostgreSQL</span>
-				<span>Redis</span>
-				<span>C#</span>
-				<span>Linux</span>
-				<span>Nginx</span>
+			<div class="paper-skill-group">
+				<span class="paper-track-id">编程语言</span>
+				<div class="paper-tags">
+					<span>Python</span>
+					<span>C#</span>
+					<span>MATLAB</span>
+					<span>JavaScript</span>
+				</div>
+			</div>
+			<div class="paper-skill-group">
+				<span class="paper-track-id">全栈与开发</span>
+				<div class="paper-tags">
+					<span>FastAPI</span>
+					<span>WPF</span>
+					<span>PostgreSQL</span>
+					<span>Redis</span>
+				</div>
+			</div>
+			<div class="paper-skill-group">
+				<span class="paper-track-id">系统与部署</span>
+				<div class="paper-tags">
+					<span>Linux</span>
+					<span>Docker</span>
+					<span>Nginx</span>
+					<span>Shell Script</span>
+				</div>
+			</div>
+			<div class="paper-skill-group">
+				<span class="paper-track-id">GIS / 遥感工具</span>
+				<div class="paper-tags">
+					<span>Google Earth Engine</span>
+					<span>GDAL</span>
+					<span>ArcGIS</span>
+				</div>
 			</div>
 		</section>
 	</section>

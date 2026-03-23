@@ -80,8 +80,20 @@ $article_query = new WP_Query(
 			<div class="paper-profile-head paper-profile-head--compact">
 				<img class="paper-profile-avatar" src="<?php echo esc_url($github_avatar); ?>" alt="Pcoke GitHub Avatar">
 				<div class="paper-profile-links">
-					<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer"><?php echo zqlovegis_render_icon('github'); ?>GitHub</a>
-					<a href="mailto:hello@zqlovegis.cn"><?php echo zqlovegis_render_icon('email'); ?>邮箱</a>
+					<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">
+						<?php echo zqlovegis_render_icon('github'); ?>
+						<span class="paper-profile-link-text">
+							<strong>GitHub</strong>
+							<small>github.com/P-Coke</small>
+						</span>
+					</a>
+					<a href="mailto:hello@zqlovegis.cn">
+						<?php echo zqlovegis_render_icon('email'); ?>
+						<span class="paper-profile-link-text">
+							<strong>邮箱</strong>
+							<small>hello@zqlovegis.cn</small>
+						</span>
+					</a>
 				</div>
 			</div>
 			<h2>Pcoke</h2>
@@ -123,6 +135,45 @@ $article_query = new WP_Query(
 				<span class="paper-track-id">三</span>
 				<strong>WebGIS 与系统实现</strong>
 				<p>还有 WebGIS、接口、小工具、部署这些偏工程的东西，我也会记，因为很多时间其实都花在它们身上。</p>
+			</div>
+		</section>
+
+		<section class="paper-panel">
+			<span class="paper-label">常用工具</span>
+			<div class="paper-skill-group">
+				<span class="paper-track-id">语言</span>
+				<div class="paper-tags">
+					<span>Python</span>
+					<span>C#</span>
+					<span>MATLAB</span>
+					<span>JavaScript</span>
+				</div>
+			</div>
+			<div class="paper-skill-group">
+				<span class="paper-track-id">开发</span>
+				<div class="paper-tags">
+					<span>FastAPI</span>
+					<span>WPF</span>
+					<span>PostgreSQL</span>
+					<span>Redis</span>
+				</div>
+			</div>
+			<div class="paper-skill-group">
+				<span class="paper-track-id">系统</span>
+				<div class="paper-tags">
+					<span>Linux</span>
+					<span>Docker</span>
+					<span>Nginx</span>
+					<span>Shell</span>
+				</div>
+			</div>
+			<div class="paper-skill-group">
+				<span class="paper-track-id">GIS / RS</span>
+				<div class="paper-tags">
+					<span>GEE</span>
+					<span>GDAL</span>
+					<span>ArcGIS</span>
+				</div>
 			</div>
 		</section>
 
