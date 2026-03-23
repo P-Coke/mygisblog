@@ -1,5 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ZQ">
-  <rect width="64" height="64" rx="14" fill="#09111f"/>
-  <path d="M17 18h30v5L25 41h22v5H17v-5l22-18H17z" fill="#9ad1ff"/>
-  <circle cx="45" cy="45" r="8" fill="none" stroke="#f6f4ef" stroke-width="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="山河与像素">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#12344f"/>
+      <stop offset="100%" stop-color="#09111f"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#sky)"/>
+  <path d="M10 42 24 24l8 10 7-7 15 15H10Z" fill="#f6f4ef"/>
+  <path d="M36 18h4v4h-4zm4 0h4v4h-4zm0 4h4v4h-4zm4 4h4v4h-4z" fill="#9ad1ff"/>
+  <path d="M14 46h36" stroke="#9ad1ff" stroke-width="2" stroke-linecap="round" opacity=".75"/>
 </svg>

@@ -28,6 +28,18 @@ add_filter('get_site_icon_url', function ($url) {
 	return get_theme_file_uri('assets/images/favicon.svg');
 });
 
+add_filter('document_title_parts', function ($parts) {
+	$brand = '山河与像素';
+
+	if (is_front_page()) {
+		return ['title' => $brand];
+	}
+
+	$parts['site'] = $brand;
+
+	return $parts;
+});
+
 function zqlovegis_render_icon(string $name): string
 {
 	$icons = [

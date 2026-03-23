@@ -305,7 +305,7 @@ img {
 
 .paper-hero-top {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 176px;
+  grid-template-columns: minmax(0, 1fr) 224px;
   gap: 24px;
   align-items: start;
 }
@@ -316,7 +316,7 @@ img {
 
 .paper-map-frame {
   position: relative;
-  min-height: 132px;
+  min-height: 168px;
   padding: 12px;
   border: 1px solid rgba(15, 63, 92, 0.18);
   border-radius: 10px;
@@ -326,37 +326,77 @@ img {
 
 .paper-map-frame__label {
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #8190a2;
   font-size: 9px;
   letter-spacing: 0.08em;
   text-transform: none;
 }
 
-.paper-map-frame__meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 10px;
-  color: #8190a2;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 9px;
-}
-
 .paper-map-frame__viewport {
-  height: 92px;
+  position: relative;
+  height: 132px;
   overflow: hidden;
   border: 1px solid rgba(15, 63, 92, 0.16);
   border-radius: 6px;
   background: #e8edf2;
 }
 
-.paper-map-frame__viewport iframe {
+.paper-map-frame__viewport img {
   display: block;
   width: 100%;
   height: 100%;
   border: 0;
-  filter: grayscale(0.1) contrast(1.02) saturate(0.88);
+  object-fit: cover;
+  filter: contrast(1.08) saturate(0.94);
+}
+
+.paper-map-frame__viewport::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.paper-map-frame__marker {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translate(-50%, -50%);
+  border: 1.5px solid rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px rgba(15, 63, 92, 0.55),
+    0 0 0 5px rgba(15, 63, 92, 0.12);
+  backdrop-filter: blur(1px);
+  pointer-events: none;
+}
+
+.paper-map-frame__marker::before,
+.paper-map-frame__marker::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgba(15, 63, 92, 0.72);
+  transform: translate(-50%, -50%);
+}
+
+.paper-map-frame__marker::before {
+  width: 1px;
+  height: 30px;
+}
+
+.paper-map-frame__marker::after {
+  width: 30px;
+  height: 1px;
 }
 
 .paper-hero-note,
@@ -937,12 +977,8 @@ img {
     min-height: auto;
   }
 
-  .paper-map-frame__grid {
-    height: 86px;
-  }
-
-  .paper-map-frame__meta {
-    font-size: 8px;
+  .paper-map-frame__viewport {
+    height: 118px;
   }
 
   .paper-article-item {

@@ -40,16 +40,12 @@ $article_query = new WP_Query(
 				</div>
 				<div class="paper-map-frame" aria-label="太原理工大学位置地图">
 					<span class="paper-map-frame__label">Taiyuan University of Technology</span>
-					<div class="paper-map-frame__meta">
-						<span>37°51′4″N</span>
-						<span>112°30′57″E</span>
-					</div>
 					<div class="paper-map-frame__viewport">
-						<iframe
-							title="Map around Taiyuan coordinates"
-							src="https://www.openstreetmap.org/export/embed.html?bbox=112.500833%2C37.841111%2C112.530833%2C37.861111&amp;layer=mapnik&amp;marker=37.851111%2C112.515833"
-							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<img
+							src="https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=112.509833,37.845111,112.521833,37.857111&amp;bboxSR=4326&amp;imageSR=4326&amp;size=1200,760&amp;format=png32&amp;f=image"
+							alt="太原理工大学附近影像图"
+							loading="lazy">
+						<span class="paper-map-frame__marker" aria-hidden="true"></span>
 					</div>
 				</div>
 			</div>
