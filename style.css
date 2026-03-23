@@ -185,33 +185,6 @@ img {
   margin-top: 24px;
 }
 
-.paper-focus h2 {
-  font-size: 1.3rem;
-}
-
-.paper-focus {
-  margin-top: 24px;
-}
-
-.paper-focus-list {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.paper-focus-item strong {
-  display: block;
-  margin-bottom: 8px;
-  color: #09111f;
-}
-
-.paper-focus-item p {
-  margin: 0;
-  color: #555555;
-  line-height: 1.7;
-  font-size: 14px;
-}
-
 .paper-dashboard h1,
 .paper-about h1,
 .paper-about h2,
@@ -493,6 +466,17 @@ img {
   color: #09111f;
 }
 
+.paper-sidebar-copy {
+  margin: 0;
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.paper-sidebar-copy + .paper-sidebar-copy {
+  margin-top: 14px;
+}
+
 .paper-track p {
   margin: 6px 0 0;
   font-size: 14px;
@@ -542,7 +526,6 @@ img {
     position: static;
   }
 
-  .paper-focus-list,
   .paper-about-grid {
     grid-template-columns: 1fr;
   }

@@ -56,25 +56,6 @@ $article_query = new WP_Query(
 			</div>
 		</section>
 
-		<section class="paper-panel paper-focus">
-			<span class="paper-label">近况</span>
-			<h2>最近手边的几件事</h2>
-			<div class="paper-focus-list">
-				<div class="paper-focus-item">
-					<strong>Himawari-8/9 火点监测</strong>
-					<p>想把静止气象卫星的数据真正用起来，不只是看图，而是慢慢做成一套稳定、能跑下去的识别流程。</p>
-				</div>
-				<div class="paper-focus-item">
-					<strong>RUSLE / CSLE 土壤侵蚀估算</strong>
-					<p>一边补模型，一边补表达。很多时候真正花时间的，不只是算出来，而是让结果看起来更有说服力。</p>
-				</div>
-				<div class="paper-focus-item">
-					<strong>WebGIS 和一些小工具</strong>
-					<p>有些东西如果只停在脚本里，总觉得差一口气。能做成页面、接口或者小工具，我还是想继续把它往前推一点。</p>
-				</div>
-			</div>
-		</section>
-
 		<section class="paper-panel paper-lab">
 			<span class="paper-label">实验小站</span>
 			<h2>葵花卫星火点监测</h2>
@@ -158,6 +139,13 @@ $article_query = new WP_Query(
 				<strong>WebGIS 与系统实现</strong>
 				<p>还有 WebGIS、接口、小工具、部署这些偏工程的东西，我也会记，因为很多时间其实都花在它们身上。</p>
 			</div>
+		</section>
+
+		<section class="paper-panel">
+			<span class="paper-label">平时怎么做</span>
+			<h2>我更习惯边做边记</h2>
+			<p class="paper-sidebar-copy">我不太喜欢把事情只停在“跑通一次”这里。能整理成脚本的就整理成脚本，能做成接口或小工具的就继续往下做，顺手把过程记下来，后面回头看也方便。</p>
+			<p class="paper-sidebar-copy">所以这里会有代码、流程、地图，也会有一些不那么正式的碎碎念。很多时候，真正留下来的反而是这些当时随手记下来的东西。</p>
 		</section>
 	</aside>
 </main>
