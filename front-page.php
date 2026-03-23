@@ -31,10 +31,20 @@ $article_query = new WP_Query(
 <main class="paper-dashboard" aria-label="<?php esc_attr_e('Academic dashboard homepage', 'zqlovegis-theme'); ?>">
 	<section class="paper-main-column">
 		<section class="paper-panel paper-hero">
-			<p class="paper-kicker">山河与像素 / zqlovegis.cn</p>
-			<h1>把地图、影像与代码，慢慢写成笔记</h1>
-			<p class="paper-english-desc">Notes on remote sensing, maps, code, and the work between them.</p>
-			<p class="paper-lead">这里主要记我在 GIS、遥感、WebGIS 和开发里碰到的东西。写得不快，也不想写得太满，先把真正留下来的部分慢慢记下来。</p>
+			<div class="paper-hero-top">
+				<div class="paper-hero-copy">
+					<p class="paper-kicker">山河与像素 / zqlovegis.cn</p>
+					<h1>把地图、影像和代码，慢慢记下来</h1>
+					<p class="paper-english-desc">Notes on maps, imagery, code, and the work between them.</p>
+					<p class="paper-lead">写地图，记影像，也记那些在代码里绕了很久才慢慢想明白的东西。</p>
+				</div>
+				<div class="paper-map-frame" aria-hidden="true">
+					<span class="paper-map-frame__label">Map Frame</span>
+					<div class="paper-map-frame__grid"></div>
+					<span class="paper-map-frame__axis paper-map-frame__axis--north">N</span>
+					<span class="paper-map-frame__axis paper-map-frame__axis--east">E</span>
+				</div>
+			</div>
 			<div class="paper-action-buttons">
 				<a class="paper-btn paper-btn--primary" href="#articles">进入文章</a>
 				<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($about_url); ?>">了解我</a>
