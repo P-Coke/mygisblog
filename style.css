@@ -94,10 +94,17 @@ img {
 }
 
 .paper-site-brand__subtitle {
-  margin: 8px 0 0;
+  margin: 2px 0 0;
   color: #8190a2;
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.76rem;
+}
+
+.paper-site-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 .paper-site-nav,
@@ -753,6 +760,10 @@ img {
   .paper-site-footer__inner,
   .paper-article-item {
     flex-direction: column;
+  }
+
+  .paper-site-brand {
+    gap: 6px;
   }
 
   .paper-dashboard,
