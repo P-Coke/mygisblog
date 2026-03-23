@@ -106,45 +106,16 @@ $article_query = new WP_Query(
 				<?php echo zqlovegis_render_skill_badge('gdal', 'GDAL'); ?>
 				<?php echo zqlovegis_render_skill_badge('csharp', 'C#'); ?>
 				<?php echo zqlovegis_render_skill_badge('postgresql', 'PostgreSQL'); ?>
-			</div>
-		</section>
-
-		<section class="paper-panel">
-			<span class="paper-label">常用工具</span>
-			<div class="paper-skill-group">
-				<span class="paper-track-id"><?php echo zqlovegis_render_icon('code'); ?>语言</span>
-				<div class="paper-tags paper-tags--compact">
-					<span>Python</span>
-					<span>C#</span>
-					<span>MATLAB</span>
-					<span>JavaScript</span>
-				</div>
-			</div>
-			<div class="paper-skill-group">
-				<span class="paper-track-id"><?php echo zqlovegis_render_icon('stack'); ?>开发</span>
-				<div class="paper-tags paper-tags--compact">
-					<span>FastAPI</span>
-					<span>WPF</span>
-					<span>PostgreSQL</span>
-					<span>Redis</span>
-				</div>
-			</div>
-			<div class="paper-skill-group">
-				<span class="paper-track-id"><?php echo zqlovegis_render_icon('server'); ?>系统</span>
-				<div class="paper-tags paper-tags--compact">
-					<span>Linux</span>
-					<span>Docker</span>
-					<span>Nginx</span>
-					<span>Shell</span>
-				</div>
-			</div>
-			<div class="paper-skill-group">
-				<span class="paper-track-id"><?php echo zqlovegis_render_icon('map'); ?>GIS / RS</span>
-				<div class="paper-tags paper-tags--compact">
-					<span>GEE</span>
-					<span>GDAL</span>
-					<span>ArcGIS</span>
-				</div>
+				<?php echo zqlovegis_render_skill_badge('code', 'MATLAB'); ?>
+				<?php echo zqlovegis_render_skill_badge('code', 'JavaScript'); ?>
+				<?php echo zqlovegis_render_skill_badge('stack', 'WPF'); ?>
+				<?php echo zqlovegis_render_skill_badge('stack', 'Redis'); ?>
+				<?php echo zqlovegis_render_skill_badge('server', 'Linux'); ?>
+				<?php echo zqlovegis_render_skill_badge('server', 'Docker'); ?>
+				<?php echo zqlovegis_render_skill_badge('server', 'Nginx'); ?>
+				<?php echo zqlovegis_render_skill_badge('server', 'Shell'); ?>
+				<?php echo zqlovegis_render_skill_badge('map', 'GEE'); ?>
+				<?php echo zqlovegis_render_skill_badge('map', 'ArcGIS'); ?>
 			</div>
 		</section>
 
