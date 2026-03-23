@@ -26,21 +26,7 @@ $article_query = new WP_Query(
 </head>
 <body <?php body_class('paper-dashboard-page'); ?>>
 <?php wp_body_open(); ?>
-
-<header class="paper-site-header">
-	<div class="paper-site-header__inner">
-		<div class="paper-site-brand">
-			<p class="paper-site-brand__title">山河与像素</p>
-			<p class="paper-site-brand__subtitle">在卫星、地图与代码之间慢慢写</p>
-		</div>
-		<nav class="paper-site-nav" aria-label="<?php esc_attr_e('Primary navigation', 'zqlovegis-theme'); ?>">
-			<a href="<?php echo esc_url(home_url('/')); ?>">首页</a>
-			<a href="<?php echo esc_url($about_url); ?>">关于</a>
-			<a href="#articles">文章</a>
-			<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
-		</nav>
-	</div>
-</header>
+<?php zqlovegis_render_site_header('home'); ?>
 
 <main class="paper-dashboard" aria-label="<?php esc_attr_e('Academic dashboard homepage', 'zqlovegis-theme'); ?>">
 	<section class="paper-main-column">
@@ -94,8 +80,8 @@ $article_query = new WP_Query(
 			<div class="paper-profile-head paper-profile-head--compact">
 				<img class="paper-profile-avatar" src="<?php echo esc_url($github_avatar); ?>" alt="Pcoke GitHub Avatar">
 				<div class="paper-profile-links">
-					<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
-					<a href="mailto:hello@zqlovegis.cn">邮箱</a>
+					<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer"><?php echo zqlovegis_render_icon('github'); ?>GitHub</a>
+					<a href="mailto:hello@zqlovegis.cn"><?php echo zqlovegis_render_icon('email'); ?>邮箱</a>
 				</div>
 			</div>
 			<h2>Pcoke</h2>
@@ -148,16 +134,7 @@ $article_query = new WP_Query(
 		</section>
 	</aside>
 </main>
-
-<footer class="paper-site-footer">
-	<div class="paper-site-footer__inner">
-		<p>这里就是一个慢慢更新的个人博客。写得不会特别快，但基本都会是我自己真的做过、想过、折腾过的东西。</p>
-		<div class="paper-site-footer__links">
-			<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
-			<a href="mailto:hello@zqlovegis.cn">Email</a>
-		</div>
-	</div>
-</footer>
+<?php zqlovegis_render_site_footer(); ?>
 
 <?php wp_footer(); ?>
 </body>

@@ -17,21 +17,7 @@ $home_url = home_url('/');
 </head>
 <body <?php body_class('paper-dashboard-page paper-about-page'); ?>>
 <?php wp_body_open(); ?>
-
-<header class="paper-site-header">
-	<div class="paper-site-header__inner">
-		<div class="paper-site-brand">
-			<p class="paper-site-brand__title">山河与像素</p>
-			<p class="paper-site-brand__subtitle">在卫星、地图与代码之间慢慢写</p>
-		</div>
-		<nav class="paper-site-nav" aria-label="<?php esc_attr_e('Primary navigation', 'zqlovegis-theme'); ?>">
-			<a href="<?php echo esc_url($home_url); ?>">首页</a>
-			<a href="<?php echo esc_url(home_url('/about/')); ?>">关于</a>
-			<a href="<?php echo esc_url($home_url); ?>#articles">文章</a>
-			<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
-		</nav>
-	</div>
-</header>
+<?php zqlovegis_render_site_header('about'); ?>
 
 <main class="paper-about">
 	<section class="paper-panel paper-about-hero">
@@ -39,8 +25,8 @@ $home_url = home_url('/');
 		<div class="paper-profile-head paper-profile-head--compact">
 			<img class="paper-profile-avatar" src="<?php echo esc_url($github_avatar); ?>" alt="Pcoke GitHub Avatar">
 			<div class="paper-profile-links">
-				<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
-				<a href="mailto:hello@zqlovegis.cn">邮箱</a>
+				<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer"><?php echo zqlovegis_render_icon('github'); ?>GitHub</a>
+				<a href="mailto:hello@zqlovegis.cn"><?php echo zqlovegis_render_icon('email'); ?>邮箱</a>
 			</div>
 		</div>
 		<h1>关于我</h1>
@@ -99,16 +85,7 @@ $home_url = home_url('/');
 		</div>
 	</section>
 </main>
-
-<footer class="paper-site-footer">
-	<div class="paper-site-footer__inner">
-		<p>这里会慢慢更新一些我自己关心、也确实花时间做过的内容。写得不一定快，但尽量都是真东西。</p>
-		<div class="paper-site-footer__links">
-			<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
-			<a href="mailto:hello@zqlovegis.cn">Email</a>
-		</div>
-	</div>
-</footer>
+<?php zqlovegis_render_site_footer(); ?>
 
 <?php wp_footer(); ?>
 </body>
