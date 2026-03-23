@@ -6,8 +6,8 @@
   <div class="wp-block-group alignwide dashboard-layout" style="margin-top:10px;margin-bottom:42px">
     <!-- wp:group {"className":"dashboard-main","layout":{"type":"constrained"}} -->
     <div class="wp-block-group dashboard-main">
-      <!-- wp:group {"className":"hero-panel hero-panel--compact","style":{"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"14px","margin":{"bottom":"20px"}}},"layout":{"type":"constrained"}} -->
-      <div class="wp-block-group hero-panel hero-panel--compact" style="margin-bottom:20px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px">
+      <!-- wp:group {"className":"hero-panel hero-panel--compact","anchor":"top","style":{"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"14px","margin":{"bottom":"20px"}}},"layout":{"type":"constrained"}} -->
+      <div id="top" class="wp-block-group hero-panel hero-panel--compact" style="margin-bottom:20px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px">
         <!-- wp:paragraph {"className":"hero-kicker"} -->
         <p class="hero-kicker">Pcoke / zqlovegis.cn</p>
         <!-- /wp:paragraph -->
@@ -27,7 +27,7 @@
         <!-- wp:buttons {"className":"hero-actions"} -->
         <div class="wp-block-buttons hero-actions">
           <!-- wp:button {"backgroundColor":"ink","textColor":"paper"} -->
-          <div class="wp-block-button"><a class="wp-block-button__link has-paper-color has-ink-background-color has-text-color has-background wp-element-button" href="/blog">进入文章</a></div>
+          <div class="wp-block-button"><a class="wp-block-button__link has-paper-color has-ink-background-color has-text-color has-background wp-element-button" href="#latest-writing">进入文章</a></div>
           <!-- /wp:button -->
 
           <!-- wp:button {"className":"is-style-outline","textColor":"paper"} -->
@@ -38,8 +38,8 @@
       </div>
       <!-- /wp:group -->
 
-      <!-- wp:group {"className":"lab-card","style":{"spacing":{"padding":{"top":"20px","right":"22px","bottom":"20px","left":"22px"},"margin":{"bottom":"28px"}}},"layout":{"type":"constrained"}} -->
-      <div class="wp-block-group lab-card" style="margin-bottom:28px;padding-top:20px;padding-right:22px;padding-bottom:20px;padding-left:22px">
+      <!-- wp:group {"className":"lab-card","anchor":"lab","style":{"spacing":{"padding":{"top":"20px","right":"22px","bottom":"20px","left":"22px"},"margin":{"bottom":"28px"}}},"layout":{"type":"constrained"}} -->
+      <div id="lab" class="wp-block-group lab-card" style="margin-bottom:28px;padding-top:20px;padding-right:22px;padding-bottom:20px;padding-left:22px">
         <!-- wp:paragraph {"className":"section-label"} -->
         <p class="section-label">The Lab</p>
         <!-- /wp:paragraph -->
@@ -53,13 +53,13 @@
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph {"className":"lab-link"} -->
-        <p class="lab-link"><a href="/category/projects">查看实验入口</a></p>
+        <p class="lab-link"><a href="https://github.com/P-Coke">查看实验仓库</a></p>
         <!-- /wp:paragraph -->
       </div>
       <!-- /wp:group -->
 
-      <!-- wp:group {"className":"article-stream","layout":{"type":"constrained"}} -->
-      <div class="wp-block-group article-stream">
+      <!-- wp:group {"className":"article-stream","anchor":"latest-writing","layout":{"type":"constrained"}} -->
+      <div id="latest-writing" class="wp-block-group article-stream">
         <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"18px"}}},"layout":{"type":"constrained"}} -->
         <div class="wp-block-group" style="margin-bottom:18px">
           <!-- wp:paragraph {"className":"section-label"} -->
