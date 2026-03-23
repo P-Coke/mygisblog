@@ -18,10 +18,10 @@ Text Domain: zqlovegis-theme
   --gis-grid: #8190a2;
   --gis-mist: #cad3de;
   --gis-accent: #9ad1ff;
-  --gis-paper: #f4f7fb;
+  --gis-paper: #f6f4ef;
   --gis-white: #ffffff;
   --gis-border: rgba(9, 17, 31, 0.1);
-  --gis-panel: rgba(255, 255, 255, 0.82);
+  --gis-panel: rgba(255, 255, 255, 0.86);
   --gis-shadow: 0 18px 42px rgba(9, 17, 31, 0.06);
   --hero-night-image: url("assets/images/hero-night.jpg");
 }
@@ -32,8 +32,8 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top right, rgba(30, 70, 98, 0.08), transparent 26%),
-    linear-gradient(180deg, #f1f5fa 0%, var(--gis-paper) 100%);
+    radial-gradient(circle at top right, rgba(30, 70, 98, 0.06), transparent 26%),
+    linear-gradient(180deg, #f4f6f4 0%, var(--gis-paper) 100%);
   color: var(--gis-ink);
 }
 
@@ -60,9 +60,9 @@ body {
 .hero-panel {
   position: relative;
   border: 1px solid rgba(154, 209, 255, 0.14);
-  border-radius: 30px;
+  border-radius: 26px;
   overflow: hidden;
-  box-shadow: 0 24px 70px rgba(3, 9, 20, 0.2);
+  box-shadow: 0 18px 48px rgba(3, 9, 20, 0.18);
   background:
     linear-gradient(135deg, rgba(5, 12, 24, 0.86) 0%, rgba(7, 16, 30, 0.72) 36%, rgba(9, 18, 34, 0.52) 100%),
     radial-gradient(circle at 20% 28%, rgba(154, 209, 255, 0.12), transparent 24%),
@@ -119,13 +119,13 @@ body {
 
 .hero-lead {
   max-width: 54rem;
-  font-size: clamp(1.06rem, 1.6vw, 1.22rem);
+  font-size: clamp(0.98rem, 1.3vw, 1.08rem);
   color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-english {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   letter-spacing: 0.06em;
   color: rgba(202, 211, 222, 0.88);
   text-transform: uppercase;
@@ -160,7 +160,7 @@ body {
 .project-card {
   height: 100%;
   border: 1px solid var(--gis-border);
-  border-radius: 22px;
+  border-radius: 18px;
   background: var(--gis-panel);
   box-shadow: var(--gis-shadow);
 }
@@ -181,7 +181,7 @@ body {
   background: rgba(17, 38, 61, 0.04);
   border: 1px solid rgba(17, 38, 61, 0.1);
   color: var(--gis-ocean);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .taxonomy-grid {
@@ -191,7 +191,7 @@ body {
 .taxonomy-card,
 .signal-card {
   border: 1px solid var(--gis-border);
-  border-radius: 22px;
+  border-radius: 18px;
   background: var(--gis-panel);
   box-shadow: var(--gis-shadow);
 }
@@ -214,7 +214,7 @@ body {
 .taxonomy-card h3 {
   margin-top: 16px;
   margin-bottom: 14px;
-  font-size: 1.18rem;
+  font-size: 1.06rem;
 }
 
 .taxonomy-card p {
@@ -233,71 +233,16 @@ body {
 }
 
 .signal-card {
-  padding: 26px;
+  padding: 22px;
 }
 
 .signal-card p:last-child {
   margin-bottom: 0;
 }
 
-.method-panel {
-  position: relative;
-  min-height: 340px;
-  border-radius: 22px;
-  overflow: hidden;
-  border: 1px solid var(--gis-border);
-  background:
-    linear-gradient(180deg, rgba(9, 17, 31, 0.96), rgba(17, 38, 61, 0.92)),
-    linear-gradient(135deg, rgba(30, 70, 98, 0.22), rgba(9, 17, 31, 0.2));
-}
-
-.method-panel::before,
-.method-panel::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-}
-
-.method-panel::before {
-  background-image:
-    linear-gradient(rgba(202, 211, 222, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(202, 211, 222, 0.08) 1px, transparent 1px);
-  background-size: 44px 44px;
-}
-
-.method-panel::after {
-  background:
-    radial-gradient(circle at 20% 28%, rgba(154, 209, 255, 0.88) 0 2px, transparent 3px),
-    radial-gradient(circle at 58% 46%, rgba(154, 209, 255, 0.78) 0 2px, transparent 3px),
-    radial-gradient(circle at 74% 24%, rgba(154, 209, 255, 0.88) 0 2px, transparent 3px),
-    linear-gradient(100deg, transparent 0 18%, rgba(154, 209, 255, 0.14) 18.3% 18.8%, transparent 19.1% 100%),
-    linear-gradient(148deg, transparent 0 48%, rgba(154, 209, 255, 0.14) 48.3% 48.8%, transparent 49.1% 100%);
-}
-
-.method-layer {
-  position: relative;
-  z-index: 1;
-  padding: 24px;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.method-metric {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(202, 211, 222, 0.12);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.84rem;
-}
-
-.method-metric span:last-child {
-  color: rgba(154, 209, 255, 0.92);
-}
-
 .project-card h3,
 .article-card h3 {
-  font-size: 1.16rem;
+  font-size: 1.02rem;
 }
 
 .project-meta {
@@ -312,6 +257,17 @@ body {
   height: 1px;
   margin: 18px 0;
   background: linear-gradient(90deg, rgba(17, 38, 61, 0.2), transparent);
+}
+
+.header-note {
+  margin-top: 2px;
+  color: rgba(9, 17, 31, 0.58);
+  font-size: 0.82rem;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.intro-strip .wp-block-columns {
+  align-items: stretch;
 }
 
 .site-footer-band {
