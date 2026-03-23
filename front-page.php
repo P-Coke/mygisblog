@@ -46,10 +46,9 @@ $article_query = new WP_Query(
 	<section class="paper-main-column">
 		<section class="paper-panel paper-hero">
 			<p class="paper-kicker">山河与像素 / zqlovegis.cn</p>
-			<h1>把看过的山河、读过的影像、写下的代码，都慢慢留在这里</h1>
-			<p class="paper-english-desc">Notes on remote sensing, maps, code, and the quiet work behind them.</p>
-			<p class="paper-lead">这里会写我在地图、遥感、GIS、WebGIS 和日常开发里碰到的东西。有的是正经做过的项目，有的是一时兴起记下来的想法，也有一些只是还没完全想明白、但不想让它就这么散掉的片段。</p>
-			<p class="paper-hero-note">它更像一本长期更新的工作手记，而不是一份写给别人看的标准说明书。</p>
+			<h1>把地图、影像与代码，慢慢写成笔记</h1>
+			<p class="paper-english-desc">Notes on remote sensing, maps, code, and the work between them.</p>
+			<p class="paper-lead">这里主要记我在 GIS、遥感、WebGIS 和开发里碰到的东西。写得不快，也不想写得太满，先把真正留下来的部分慢慢记下来。</p>
 			<div class="paper-action-buttons">
 				<a class="paper-btn paper-btn--primary" href="#articles">进入文章</a>
 				<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($about_url); ?>">了解我</a>
