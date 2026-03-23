@@ -31,27 +31,24 @@ $article_query = new WP_Query(
 <main class="paper-dashboard" aria-label="<?php esc_attr_e('Academic dashboard homepage', 'zqlovegis-theme'); ?>">
 	<section class="paper-main-column">
 		<section class="paper-panel paper-hero">
-			<div class="paper-hero-top">
-				<div class="paper-hero-copy">
+			<div class="paper-hero-map-shell">
+				<div id="paper-hero-map" class="paper-hero-map" aria-hidden="true"></div>
+				<div class="paper-hero-overlay">
+					<div class="paper-hero-copy-card">
 					<p class="paper-kicker">山河与像素 / zqlovegis.cn</p>
 					<h1>把地图、影像和代码，慢慢记下来</h1>
 					<p class="paper-english-desc">Notes on maps, imagery, code, and the work between them.</p>
 					<p class="paper-lead">写地图，记影像，也记那些在代码里绕了很久才慢慢想明白的东西。</p>
-				</div>
-				<div class="paper-map-frame" aria-label="太原理工大学位置地图">
-					<span class="paper-map-frame__label">Taiyuan University of Technology</span>
-					<div class="paper-map-frame__viewport">
-						<img
-							src="https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=112.509833,37.845111,112.521833,37.857111&amp;bboxSR=4326&amp;imageSR=4326&amp;size=1200,760&amp;format=png32&amp;f=image"
-							alt="太原理工大学附近影像图"
-							loading="lazy">
-						<span class="paper-map-frame__marker" aria-hidden="true"></span>
+						<div class="paper-action-buttons">
+							<a class="paper-btn paper-btn--primary" href="#articles">进入文章</a>
+							<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($about_url); ?>">了解我</a>
+						</div>
+					</div>
+					<div class="paper-map-window" aria-label="地图标注">
+						<span class="paper-map-window__eyebrow">Imagery</span>
+						<strong>Taiyuan University of Technology</strong>
 					</div>
 				</div>
-			</div>
-			<div class="paper-action-buttons">
-				<a class="paper-btn paper-btn--primary" href="#articles">进入文章</a>
-				<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($about_url); ?>">了解我</a>
 			</div>
 		</section>
 

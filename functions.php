@@ -22,6 +22,31 @@ add_action('wp_enqueue_scripts', function () {
 		[],
 		$style_version
 	);
+
+	if (is_front_page()) {
+		wp_enqueue_style(
+			'zqlovegis-leaflet',
+			'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
+			[],
+			'1.9.4'
+		);
+
+		wp_enqueue_script(
+			'zqlovegis-leaflet',
+			'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
+			[],
+			'1.9.4',
+			true
+		);
+
+		wp_enqueue_script(
+			'zqlovegis-hero-map',
+			get_theme_file_uri('assets/js/hero-map.js'),
+			['zqlovegis-leaflet'],
+			$style_version,
+			true
+		);
+	}
 });
 
 add_filter('get_site_icon_url', function ($url) {
