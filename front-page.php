@@ -31,7 +31,7 @@ $article_query = new WP_Query(
 	<div class="paper-site-header__inner">
 		<div class="paper-site-brand">
 			<p class="paper-site-brand__title">山河与像素</p>
-			<p class="paper-site-brand__subtitle">张琦 · 在卫星、地图与代码之间慢慢写</p>
+			<p class="paper-site-brand__subtitle">在卫星、地图与代码之间慢慢写</p>
 		</div>
 		<nav class="paper-site-nav" aria-label="<?php esc_attr_e('Primary navigation', 'zqlovegis-theme'); ?>">
 			<a href="<?php echo esc_url(home_url('/')); ?>">首页</a>
@@ -46,47 +46,31 @@ $article_query = new WP_Query(
 	<section class="paper-main-column">
 		<section class="paper-panel paper-hero">
 			<p class="paper-kicker">山河与像素 / zqlovegis.cn</p>
-			<h1>这儿主要写点和地图、遥感、代码有关的东西</h1>
-			<p class="paper-english-desc">A personal blog about GIS, remote sensing, coding, and everyday work.</p>
-			<p class="paper-lead">平时做项目、写代码、处理数据的时候，总会踩到不少坑，也会冒出一些想法。这个站点就是拿来记这些东西的，写得会比较杂一点，但基本都跟 GIS、遥感、WebGIS、Linux 和小工具开发有关。</p>
-			<p class="paper-hero-note">有些文章会偏技术细节，有些会更像工作笔记，更新节奏不一定固定，但尽量都写自己真正做过的内容。</p>
+			<h1>把看过的山河、读过的影像、写下的代码，都慢慢留在这里</h1>
+			<p class="paper-english-desc">Notes on remote sensing, maps, code, and the quiet work behind them.</p>
+			<p class="paper-lead">这里会写我在地图、遥感、GIS、WebGIS 和日常开发里碰到的东西。有的是正经做过的项目，有的是一时兴起记下来的想法，也有一些只是还没完全想明白、但不想让它就这么散掉的片段。</p>
+			<p class="paper-hero-note">它更像一本长期更新的工作手记，而不是一份写给别人看的标准说明书。</p>
 			<div class="paper-action-buttons">
 				<a class="paper-btn paper-btn--primary" href="#articles">进入文章</a>
 				<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($about_url); ?>">了解我</a>
 			</div>
 		</section>
 
-		<section class="paper-intro-grid" aria-label="首页摘要">
-			<section class="paper-panel paper-mini-panel">
-				<span class="paper-label">最近在看</span>
-				<h2>这段时间主要折腾什么</h2>
-				<p>最近花得比较多的时间还是在生态遥感、多源卫星数据、火点监测，还有土壤侵蚀估算这些方向上。有些是课程和研究里的东西，有些是自己真感兴趣想继续往下挖的。</p>
-				<p class="paper-mini-meta">大多还是和卫星数据、空间分析、研究里的具体问题有关。</p>
-			</section>
-
-			<section class="paper-panel paper-mini-panel">
-				<span class="paper-label">平时怎么做</span>
-				<h2>我更习惯边做边记</h2>
-				<p>我不太喜欢把东西只停在“跑通一次”这个阶段。能整理成脚本的就整理成脚本，能做成接口或小工具的就继续往下做，顺手把过程记下来，后面自己回头看也方便。</p>
-				<p class="paper-mini-meta">所以这里会有代码、流程、地图，也会有一些不那么正式的碎碎念。</p>
-			</section>
-		</section>
-
 		<section class="paper-panel paper-focus">
-			<span class="paper-label">最近在忙</span>
-			<h2>手头几件事</h2>
+			<span class="paper-label">近况</span>
+			<h2>最近手边的几件事</h2>
 			<div class="paper-focus-list">
 				<div class="paper-focus-item">
 					<strong>Himawari-8/9 火点监测</strong>
-					<p>主要在看怎么把静止气象卫星的数据真正用起来，做成比较稳定的火点识别和自动处理流程。</p>
+					<p>想把静止气象卫星的数据真正用起来，不只是看图，而是慢慢做成一套稳定、能跑下去的识别流程。</p>
 				</div>
 				<div class="paper-focus-item">
 					<strong>RUSLE / CSLE 土壤侵蚀估算</strong>
-					<p>一边补模型和方法，一边琢磨怎么把空间因子整理得更清楚，最后算出来的结果也更像回事。</p>
+					<p>一边补模型，一边补表达。很多时候真正花时间的，不只是算出来，而是让结果看起来更有说服力。</p>
 				</div>
 				<div class="paper-focus-item">
 					<strong>WebGIS 和一些小工具</strong>
-					<p>有些东西光分析还不够，我还是想把它做成能看、能点、能继续用的小系统，而不是只留在脚本里。</p>
+					<p>有些东西如果只停在脚本里，总觉得差一口气。能做成页面、接口或者小工具，我还是想继续把它往前推一点。</p>
 				</div>
 			</div>
 		</section>
@@ -94,7 +78,7 @@ $article_query = new WP_Query(
 		<section class="paper-panel paper-lab">
 			<span class="paper-label">实验小站</span>
 			<h2>葵花卫星火点监测</h2>
-			<p>这个位置以后会放我正在做的一些实验页面。和博客文章不一样，这里更偏“边做边试”，会放一些还在打磨中的东西。</p>
+			<p>这里以后会放一些还在打磨中的页面。它们也许还不够完整，但至少能看见思路是怎么一点点长出来的。</p>
 			<a class="paper-lab-link" href="<?php echo esc_url($lab_url); ?>" target="_blank" rel="noreferrer">进去看看 →</a>
 		</section>
 
@@ -132,8 +116,8 @@ $article_query = new WP_Query(
 			</div>
 			<h2>Pcoke</h2>
 			<p class="paper-real-name">张琦</p>
-			<p class="paper-bio">太原理工大学 · 测绘工程<br>平时主要在遥感、GIS 和开发之间来回切换</p>
-			<p class="paper-profile-note">更喜欢把事情做成能复用、能继续改、也能讲清楚的东西。</p>
+			<p class="paper-bio">太原理工大学 · 测绘工程<br>平时在遥感、GIS 和开发之间慢慢来回走</p>
+			<p class="paper-profile-note">比起把事情做完，我更在意它能不能留下来，能不能继续被修改，能不能说得明白。</p>
 			<div class="paper-tags">
 				<span>Python</span>
 				<span>FastAPI</span>
@@ -154,21 +138,21 @@ $article_query = new WP_Query(
 		</section>
 
 		<section class="paper-panel">
-			<span class="paper-label">平时会写</span>
+			<span class="paper-label">会写到的东西</span>
 			<div class="paper-track">
 				<span class="paper-track-id">一</span>
 				<strong>生态遥感</strong>
-				<p>像火点监测、多源遥感数据处理、生态变化分析这些内容，后面应该会慢慢写得比较多。</p>
+				<p>像火点监测、多源遥感数据处理、生态变化分析这些内容，后面多半会反复出现。</p>
 			</div>
 			<div class="paper-track">
 				<span class="paper-track-id">二</span>
 				<strong>空间数据工程</strong>
-				<p>比如 Python、GDAL、数据库、脚本处理流程，主要是一些真正做事时会碰到的问题和整理方法。</p>
+				<p>比如 Python、GDAL、数据库和脚本处理流程，更多会写那些真正做事时绕不开的问题。</p>
 			</div>
 			<div class="paper-track">
 				<span class="paper-track-id">三</span>
 				<strong>WebGIS 与系统实现</strong>
-				<p>还有 WebGIS、接口、小工具、部署这些偏工程的东西，我也会记，毕竟很多时候真正花时间的都在这部分。</p>
+				<p>还有 WebGIS、接口、小工具、部署这些偏工程的东西，我也会记，因为很多时间其实都花在它们身上。</p>
 			</div>
 		</section>
 	</aside>
