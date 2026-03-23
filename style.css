@@ -314,6 +314,8 @@ img {
 .paper-hero {
   padding: 0;
   overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(242, 245, 248, 0.96));
 }
 
 .paper-hero::before {
@@ -325,15 +327,21 @@ img {
 .paper-hero-map-shell {
   position: relative;
   min-height: 300px;
-  border-radius: inherit;
+  margin: 14px;
+  border: 1px solid rgba(15, 63, 92, 0.18);
+  border-radius: 18px;
   overflow: hidden;
   background: #dbe4ec;
+  box-shadow:
+    0 10px 24px rgba(9, 17, 31, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.38);
 }
 
 .paper-hero-map {
   position: absolute;
   inset: 0;
   z-index: 1;
+  background: #dbe4ec;
 }
 
 .paper-hero-map::after {
@@ -343,10 +351,22 @@ img {
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
     linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
-    linear-gradient(135deg, rgba(9, 17, 31, 0.2), rgba(9, 17, 31, 0.04) 45%, rgba(9, 17, 31, 0.22));
+    linear-gradient(135deg, rgba(9, 17, 31, 0.16), rgba(9, 17, 31, 0.03) 45%, rgba(9, 17, 31, 0.18));
   background-size: 28px 28px, 28px 28px, auto;
   pointer-events: none;
   z-index: 402;
+}
+
+.paper-hero-map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.32),
+    inset 0 0 0 12px rgba(9, 17, 31, 0.02);
+  pointer-events: none;
+  z-index: 403;
 }
 
 .paper-hero-overlay {
@@ -1117,6 +1137,10 @@ img {
   .paper-hero-copy-card,
   .paper-map-window {
     max-width: none;
+  }
+
+  .paper-hero-map-shell {
+    margin: 10px;
   }
 
   .paper-article-item {
