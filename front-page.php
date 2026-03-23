@@ -38,11 +38,19 @@ $article_query = new WP_Query(
 					<p class="paper-english-desc">Notes on maps, imagery, code, and the work between them.</p>
 					<p class="paper-lead">写地图，记影像，也记那些在代码里绕了很久才慢慢想明白的东西。</p>
 				</div>
-				<div class="paper-map-frame" aria-hidden="true">
-					<span class="paper-map-frame__label">Map Frame</span>
-					<div class="paper-map-frame__grid"></div>
-					<span class="paper-map-frame__axis paper-map-frame__axis--north">N</span>
-					<span class="paper-map-frame__axis paper-map-frame__axis--east">E</span>
+				<div class="paper-map-frame" aria-label="太原理工大学位置地图">
+					<span class="paper-map-frame__label">Taiyuan University of Technology</span>
+					<div class="paper-map-frame__meta">
+						<span>37°51′4″N</span>
+						<span>112°30′57″E</span>
+					</div>
+					<div class="paper-map-frame__viewport">
+						<iframe
+							title="Map around Taiyuan coordinates"
+							src="https://www.openstreetmap.org/export/embed.html?bbox=112.500833%2C37.841111%2C112.530833%2C37.861111&amp;layer=mapnik&amp;marker=37.851111%2C112.515833"
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
 				</div>
 			</div>
 			<div class="paper-action-buttons">
