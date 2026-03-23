@@ -32,11 +32,11 @@ $home_url = home_url('/');
 						<small>github.com/P-Coke</small>
 					</span>
 				</a>
-				<a href="mailto:hello@zqlovegis.cn">
+				<a href="mailto:zq.2004@outlook.com">
 					<?php echo zqlovegis_render_icon('email'); ?>
 					<span class="paper-profile-link-text">
 						<strong>邮箱</strong>
-						<small>hello@zqlovegis.cn</small>
+						<small>zq.2004@outlook.com</small>
 					</span>
 				</a>
 			</div>
@@ -69,8 +69,8 @@ $home_url = home_url('/');
 			<h2>技术与实现</h2>
 			<p>我做事的习惯一直比较慢，也比较拧。相比只把分析跑通一次，我更喜欢继续往下做一点，看看它能不能变成脚本、接口、页面，或者一个以后还能继续改的小工具。</p>
 			<div class="paper-skill-group">
-				<span class="paper-track-id">编程语言</span>
-				<div class="paper-tags">
+				<span class="paper-track-id"><?php echo zqlovegis_render_icon('code'); ?>编程语言</span>
+				<div class="paper-tags paper-tags--compact">
 					<span>Python</span>
 					<span>C#</span>
 					<span>MATLAB</span>
@@ -78,8 +78,8 @@ $home_url = home_url('/');
 				</div>
 			</div>
 			<div class="paper-skill-group">
-				<span class="paper-track-id">全栈与开发</span>
-				<div class="paper-tags">
+				<span class="paper-track-id"><?php echo zqlovegis_render_icon('stack'); ?>全栈与开发</span>
+				<div class="paper-tags paper-tags--compact">
 					<span>FastAPI</span>
 					<span>WPF</span>
 					<span>PostgreSQL</span>
@@ -87,8 +87,8 @@ $home_url = home_url('/');
 				</div>
 			</div>
 			<div class="paper-skill-group">
-				<span class="paper-track-id">系统与部署</span>
-				<div class="paper-tags">
+				<span class="paper-track-id"><?php echo zqlovegis_render_icon('server'); ?>系统与部署</span>
+				<div class="paper-tags paper-tags--compact">
 					<span>Linux</span>
 					<span>Docker</span>
 					<span>Nginx</span>
@@ -96,8 +96,8 @@ $home_url = home_url('/');
 				</div>
 			</div>
 			<div class="paper-skill-group">
-				<span class="paper-track-id">GIS / 遥感工具</span>
-				<div class="paper-tags">
+				<span class="paper-track-id"><?php echo zqlovegis_render_icon('map'); ?>GIS / 遥感工具</span>
+				<div class="paper-tags paper-tags--compact">
 					<span>Google Earth Engine</span>
 					<span>GDAL</span>
 					<span>ArcGIS</span>

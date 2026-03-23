@@ -87,11 +87,11 @@ $article_query = new WP_Query(
 							<small>github.com/P-Coke</small>
 						</span>
 					</a>
-					<a href="mailto:hello@zqlovegis.cn">
+					<a href="mailto:zq.2004@outlook.com">
 						<?php echo zqlovegis_render_icon('email'); ?>
 						<span class="paper-profile-link-text">
 							<strong>邮箱</strong>
-							<small>hello@zqlovegis.cn</small>
+							<small>zq.2004@outlook.com</small>
 						</span>
 					</a>
 				</div>
@@ -106,6 +106,45 @@ $article_query = new WP_Query(
 				<span>GDAL</span>
 				<span>C#</span>
 				<span>PostgreSQL</span>
+			</div>
+		</section>
+
+		<section class="paper-panel">
+			<span class="paper-label">常用工具</span>
+			<div class="paper-skill-group">
+				<span class="paper-track-id"><?php echo zqlovegis_render_icon('code'); ?>语言</span>
+				<div class="paper-tags paper-tags--compact">
+					<span>Python</span>
+					<span>C#</span>
+					<span>MATLAB</span>
+					<span>JavaScript</span>
+				</div>
+			</div>
+			<div class="paper-skill-group">
+				<span class="paper-track-id"><?php echo zqlovegis_render_icon('stack'); ?>开发</span>
+				<div class="paper-tags paper-tags--compact">
+					<span>FastAPI</span>
+					<span>WPF</span>
+					<span>PostgreSQL</span>
+					<span>Redis</span>
+				</div>
+			</div>
+			<div class="paper-skill-group">
+				<span class="paper-track-id"><?php echo zqlovegis_render_icon('server'); ?>系统</span>
+				<div class="paper-tags paper-tags--compact">
+					<span>Linux</span>
+					<span>Docker</span>
+					<span>Nginx</span>
+					<span>Shell</span>
+				</div>
+			</div>
+			<div class="paper-skill-group">
+				<span class="paper-track-id"><?php echo zqlovegis_render_icon('map'); ?>GIS / RS</span>
+				<div class="paper-tags paper-tags--compact">
+					<span>GEE</span>
+					<span>GDAL</span>
+					<span>ArcGIS</span>
+				</div>
 			</div>
 		</section>
 
@@ -135,45 +174,6 @@ $article_query = new WP_Query(
 				<span class="paper-track-id">三</span>
 				<strong>WebGIS 与系统实现</strong>
 				<p>还有 WebGIS、接口、小工具、部署这些偏工程的东西，我也会记，因为很多时间其实都花在它们身上。</p>
-			</div>
-		</section>
-
-		<section class="paper-panel">
-			<span class="paper-label">常用工具</span>
-			<div class="paper-skill-group">
-				<span class="paper-track-id">语言</span>
-				<div class="paper-tags">
-					<span>Python</span>
-					<span>C#</span>
-					<span>MATLAB</span>
-					<span>JavaScript</span>
-				</div>
-			</div>
-			<div class="paper-skill-group">
-				<span class="paper-track-id">开发</span>
-				<div class="paper-tags">
-					<span>FastAPI</span>
-					<span>WPF</span>
-					<span>PostgreSQL</span>
-					<span>Redis</span>
-				</div>
-			</div>
-			<div class="paper-skill-group">
-				<span class="paper-track-id">系统</span>
-				<div class="paper-tags">
-					<span>Linux</span>
-					<span>Docker</span>
-					<span>Nginx</span>
-					<span>Shell</span>
-				</div>
-			</div>
-			<div class="paper-skill-group">
-				<span class="paper-track-id">GIS / RS</span>
-				<div class="paper-tags">
-					<span>GEE</span>
-					<span>GDAL</span>
-					<span>ArcGIS</span>
-				</div>
 			</div>
 		</section>
 

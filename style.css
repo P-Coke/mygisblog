@@ -306,7 +306,7 @@ img {
 .paper-profile-note {
   margin: 14px 0 0;
   color: #8190a2;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   line-height: 1.75;
 }
 
@@ -500,6 +500,8 @@ img {
 
 .paper-bio {
   margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.7;
 }
 
 .paper-tags {
@@ -534,11 +536,19 @@ img {
 }
 
 .paper-track-id {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin-bottom: 4px;
   color: #007cba;
   font-size: 12px;
   font-weight: 700;
+}
+
+.paper-track-id svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
 }
 
 .paper-track strong {
@@ -568,6 +578,16 @@ img {
 
 .paper-skill-group .paper-tags {
   margin-top: 8px;
+}
+
+.paper-tags--compact {
+  gap: 6px;
+}
+
+.paper-tags--compact span {
+  padding: 3px 7px;
+  font-size: 11px;
+  background: #f6f7f8;
 }
 
 .paper-site-footer {
