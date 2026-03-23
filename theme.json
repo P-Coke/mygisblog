@@ -10,13 +10,13 @@
     "color": {
       "defaultPalette": false,
       "palette": [
-        { "slug": "ink", "name": "GIS Ink", "color": "#0d1b2a" },
-        { "slug": "ocean", "name": "Ocean", "color": "#12344d" },
-        { "slug": "water", "name": "Water", "color": "#1f6f8b" },
-        { "slug": "grid", "name": "Grid", "color": "#98a9b3" },
-        { "slug": "land", "name": "Land", "color": "#dce7d3" },
-        { "slug": "accent", "name": "Accent", "color": "#ffb703" },
-        { "slug": "paper", "name": "Paper", "color": "#f8fbfd" },
+        { "slug": "ink", "name": "GIS Ink", "color": "#09111f" },
+        { "slug": "ocean", "name": "Ocean", "color": "#11263d" },
+        { "slug": "water", "name": "Water", "color": "#1e4662" },
+        { "slug": "grid", "name": "Grid", "color": "#8190a2" },
+        { "slug": "mist", "name": "Mist", "color": "#cad3de" },
+        { "slug": "accent", "name": "Accent", "color": "#9ad1ff" },
+        { "slug": "paper", "name": "Paper", "color": "#f4f7fb" },
         { "slug": "white", "name": "White", "color": "#ffffff" }
       ]
     },
@@ -25,13 +25,13 @@
       "fluid": true,
       "fontFamilies": [
         {
-          "fontFamily": "\"Space Grotesk\", \"Segoe UI\", sans-serif",
-          "name": "Space Grotesk",
+          "fontFamily": "\"Noto Serif SC\", \"Source Han Serif SC\", \"Songti SC\", serif",
+          "name": "Noto Serif SC",
           "slug": "display"
         },
         {
-          "fontFamily": "\"IBM Plex Sans\", \"Segoe UI\", sans-serif",
-          "name": "IBM Plex Sans",
+          "fontFamily": "\"Noto Sans SC\", \"Source Han Sans SC\", \"Microsoft YaHei UI\", sans-serif",
+          "name": "Noto Sans SC",
           "slug": "body"
         },
         {
@@ -62,26 +62,26 @@
   },
   "styles": {
     "color": {
-      "background": "#f8fbfd",
-      "text": "#0d1b2a"
+      "background": "#f4f7fb",
+      "text": "#09111f"
     },
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--body)",
       "fontSize": "var(--wp--preset--font-size--sm)",
-      "lineHeight": "1.7"
+      "lineHeight": "1.72"
     },
     "blocks": {
       "core/site-title": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--display)",
-          "fontWeight": "700"
+          "fontWeight": "600"
         }
       },
       "core/heading": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--display)",
-          "fontWeight": "700",
-          "lineHeight": "1.05"
+          "fontWeight": "600",
+          "lineHeight": "1.12"
         }
       },
       "core/button": {

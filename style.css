@@ -12,16 +12,18 @@ Text Domain: zqlovegis-theme
 */
 
 :root {
-  --gis-ink: #0d1b2a;
-  --gis-ocean: #12344d;
-  --gis-water: #1f6f8b;
-  --gis-grid: #98a9b3;
-  --gis-land: #dce7d3;
-  --gis-accent: #ffb703;
-  --gis-paper: #f8fbfd;
+  --gis-ink: #09111f;
+  --gis-ocean: #11263d;
+  --gis-water: #1e4662;
+  --gis-grid: #8190a2;
+  --gis-mist: #cad3de;
+  --gis-accent: #9ad1ff;
+  --gis-paper: #f4f7fb;
   --gis-white: #ffffff;
-  --gis-border: rgba(13, 27, 42, 0.12);
-  --gis-shadow: 0 20px 50px rgba(13, 27, 42, 0.08);
+  --gis-border: rgba(9, 17, 31, 0.1);
+  --gis-panel: rgba(255, 255, 255, 0.82);
+  --gis-shadow: 0 18px 42px rgba(9, 17, 31, 0.06);
+  --hero-night-image: url("assets/images/hero-night.jpg");
 }
 
 html {
@@ -30,8 +32,9 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top right, rgba(31, 111, 139, 0.15), transparent 28%),
-    linear-gradient(180deg, #f5f9fc 0%, var(--gis-paper) 100%);
+    radial-gradient(circle at top right, rgba(30, 70, 98, 0.08), transparent 26%),
+    linear-gradient(180deg, #f1f5fa 0%, var(--gis-paper) 100%);
+  color: var(--gis-ink);
 }
 
 .wp-site-blocks {
@@ -48,110 +51,276 @@ body {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(152, 169, 179, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(152, 169, 179, 0.1) 1px, transparent 1px);
-  background-size: 36px 36px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent 80%);
+    linear-gradient(rgba(129, 144, 162, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(129, 144, 162, 0.07) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 78%);
 }
 
 .hero-panel {
-  border: 1px solid var(--gis-border);
-  border-radius: 28px;
+  position: relative;
+  border: 1px solid rgba(154, 209, 255, 0.14);
+  border-radius: 30px;
   overflow: hidden;
-  box-shadow: var(--gis-shadow);
+  box-shadow: 0 24px 70px rgba(3, 9, 20, 0.2);
   background:
-    linear-gradient(135deg, rgba(13, 27, 42, 0.96) 0%, rgba(18, 52, 77, 0.94) 45%, rgba(31, 111, 139, 0.88) 100%);
+    linear-gradient(135deg, rgba(5, 12, 24, 0.86) 0%, rgba(7, 16, 30, 0.72) 36%, rgba(9, 18, 34, 0.52) 100%),
+    radial-gradient(circle at 20% 28%, rgba(154, 209, 255, 0.12), transparent 24%),
+    radial-gradient(circle at 78% 18%, rgba(71, 114, 153, 0.16), transparent 18%),
+    var(--hero-night-image),
+    linear-gradient(180deg, #07101c 0%, #0d1b2f 100%);
+  background-size: cover;
+  background-position: center center;
   color: var(--gis-white);
 }
 
-.hero-kicker {
+.hero-panel::before,
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-panel::before {
+  background-image:
+    linear-gradient(rgba(202, 211, 222, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(202, 211, 222, 0.08) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.12));
+}
+
+.hero-panel::after {
+  background:
+    linear-gradient(90deg, transparent 0, transparent calc(100% - 80px), rgba(154, 209, 255, 0.18) calc(100% - 80px), rgba(154, 209, 255, 0.18) calc(100% - 79px), transparent calc(100% - 79px)),
+    linear-gradient(180deg, transparent 0, transparent 78px, rgba(154, 209, 255, 0.16) 78px, rgba(154, 209, 255, 0.16) 79px, transparent 79px);
+  opacity: 0.45;
+}
+
+.hero-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-kicker,
+.micro-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  gap: 8px;
+  padding: 7px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
-  font-size: 0.84rem;
-  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-family: "IBM Plex Mono", monospace;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hero-lead {
+  max-width: 54rem;
+  font-size: clamp(1.06rem, 1.6vw, 1.22rem);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-english {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  color: rgba(202, 211, 222, 0.88);
   text-transform: uppercase;
 }
 
-.hero-metrics {
+.hero-metrics,
+.signal-grid,
+.taxonomy-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
+.hero-metrics {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .hero-metric {
-  padding: 18px;
+  padding: 18px 20px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.11);
   backdrop-filter: blur(6px);
+}
+
+.hero-metric strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .project-card {
   height: 100%;
   border: 1px solid var(--gis-border);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.88);
+  border-radius: 22px;
+  background: var(--gis-panel);
   box-shadow: var(--gis-shadow);
 }
 
 .section-label {
   color: var(--gis-water);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .stack-chip {
   display: inline-block;
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(31, 111, 139, 0.08);
-  border: 1px solid rgba(31, 111, 139, 0.12);
+  background: rgba(17, 38, 61, 0.04);
+  border: 1px solid rgba(17, 38, 61, 0.1);
+  color: var(--gis-ocean);
+  font-size: 0.92rem;
 }
 
-.map-frame {
-  position: relative;
-  min-height: 320px;
-  border-radius: 24px;
-  overflow: hidden;
-  background:
-    linear-gradient(180deg, rgba(18, 52, 77, 0.08), rgba(31, 111, 139, 0.16)),
-    radial-gradient(circle at 30% 40%, rgba(255, 183, 3, 0.25), transparent 22%),
-    linear-gradient(135deg, rgba(220, 231, 211, 0.55), rgba(31, 111, 139, 0.08));
+.taxonomy-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.taxonomy-card,
+.signal-card {
   border: 1px solid var(--gis-border);
+  border-radius: 22px;
+  background: var(--gis-panel);
+  box-shadow: var(--gis-shadow);
 }
 
-.map-frame::before,
-.map-frame::after {
+.taxonomy-card {
+  position: relative;
+  padding: 24px;
+}
+
+.taxonomy-card::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(30, 70, 98, 0.3), transparent 72%);
+}
+
+.taxonomy-card h3 {
+  margin-top: 16px;
+  margin-bottom: 14px;
+  font-size: 1.18rem;
+}
+
+.taxonomy-card p {
+  margin-bottom: 18px;
+  color: rgba(9, 17, 31, 0.76);
+}
+
+.taxonomy-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.signal-grid {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+}
+
+.signal-card {
+  padding: 26px;
+}
+
+.signal-card p:last-child {
+  margin-bottom: 0;
+}
+
+.method-panel {
+  position: relative;
+  min-height: 340px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--gis-border);
+  background:
+    linear-gradient(180deg, rgba(9, 17, 31, 0.96), rgba(17, 38, 61, 0.92)),
+    linear-gradient(135deg, rgba(30, 70, 98, 0.22), rgba(9, 17, 31, 0.2));
+}
+
+.method-panel::before,
+.method-panel::after {
   content: "";
   position: absolute;
   inset: 0;
 }
 
-.map-frame::before {
+.method-panel::before {
   background-image:
-    linear-gradient(rgba(18, 52, 77, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(18, 52, 77, 0.1) 1px, transparent 1px);
-  background-size: 48px 48px;
+    linear-gradient(rgba(202, 211, 222, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(202, 211, 222, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
 }
 
-.map-frame::after {
+.method-panel::after {
   background:
-    radial-gradient(circle at 22% 28%, rgba(18, 52, 77, 0.28) 0 3px, transparent 4px),
-    radial-gradient(circle at 64% 52%, rgba(18, 52, 77, 0.28) 0 3px, transparent 4px),
-    radial-gradient(circle at 78% 24%, rgba(18, 52, 77, 0.28) 0 3px, transparent 4px);
+    radial-gradient(circle at 20% 28%, rgba(154, 209, 255, 0.88) 0 2px, transparent 3px),
+    radial-gradient(circle at 58% 46%, rgba(154, 209, 255, 0.78) 0 2px, transparent 3px),
+    radial-gradient(circle at 74% 24%, rgba(154, 209, 255, 0.88) 0 2px, transparent 3px),
+    linear-gradient(100deg, transparent 0 18%, rgba(154, 209, 255, 0.14) 18.3% 18.8%, transparent 19.1% 100%),
+    linear-gradient(148deg, transparent 0 48%, rgba(154, 209, 255, 0.14) 48.3% 48.8%, transparent 49.1% 100%);
+}
+
+.method-layer {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.method-metric {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(202, 211, 222, 0.12);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.84rem;
+}
+
+.method-metric span:last-child {
+  color: rgba(154, 209, 255, 0.92);
+}
+
+.project-card h3,
+.article-card h3 {
+  font-size: 1.16rem;
+}
+
+.project-meta {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gis-water);
+}
+
+.card-divider {
+  height: 1px;
+  margin: 18px 0;
+  background: linear-gradient(90deg, rgba(17, 38, 61, 0.2), transparent);
 }
 
 .site-footer-band {
   border-top: 1px solid var(--gis-border);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
+  .taxonomy-grid,
+  .signal-grid,
   .hero-metrics {
     grid-template-columns: 1fr;
   }
