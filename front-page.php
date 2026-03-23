@@ -5,7 +5,9 @@ if (!defined('ABSPATH')) {
 }
 
 $github_url = 'https://github.com/P-Coke';
+$github_avatar = 'https://github.com/P-Coke.png?size=240';
 $lab_url = 'https://github.com/P-Coke';
+$about_url = home_url('/about/');
 
 $article_query = new WP_Query(
 	[
@@ -29,9 +31,11 @@ $article_query = new WP_Query(
 	<div class="paper-site-header__inner">
 		<div class="paper-site-brand">
 			<p class="paper-site-brand__title">Pcoke / GIS Notes</p>
-			<p class="paper-site-brand__subtitle">张琦 · 测绘与空间信息工程博客</p>
+			<p class="paper-site-brand__subtitle">张琦 · 关于地图、遥感与代码的个人博客</p>
 		</div>
 		<nav class="paper-site-nav" aria-label="<?php esc_attr_e('Primary navigation', 'zqlovegis-theme'); ?>">
+			<a href="<?php echo esc_url(home_url('/')); ?>">首页</a>
+			<a href="<?php echo esc_url($about_url); ?>">关于</a>
 			<a href="#articles">文章</a>
 			<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
 		</nav>
@@ -42,19 +46,52 @@ $article_query = new WP_Query(
 	<section class="paper-main-column">
 		<section class="paper-panel paper-hero">
 			<p class="paper-kicker">Pcoke / zqlovegis.cn</p>
-			<h1>测绘与空间信息工程</h1>
-			<p class="paper-english-desc">Geomatics, Python for GIS, WebGIS engineering, and remote sensing notes.</p>
-			<p class="paper-lead">这里记录空间数据处理、遥感工作流、WebGIS 架构、地图表达与科研型技术实现。我更关心如何把数据、方法、系统与可解释表达组织成可复用的工程能力。</p>
+			<h1>关于地图、遥感与代码的个人笔记</h1>
+			<p class="paper-english-desc">Personal notes on GIS, remote sensing, coding, and the work behind them.</p>
+			<p class="paper-lead">这里主要写我平时在做和在学的内容：Python for GIS、生态遥感、WebGIS、小工具开发、Linux 折腾，以及项目推进过程中遇到的问题、思路和复盘。它首先是个人博客，其次才是作品展示。</p>
 			<div class="paper-action-buttons">
 				<a class="paper-btn paper-btn--primary" href="#articles">进入文章</a>
-				<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
+				<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($about_url); ?>">了解我</a>
+			</div>
+		</section>
+
+		<section class="paper-intro-grid" aria-label="首页摘要">
+			<section class="paper-panel paper-mini-panel">
+				<span class="paper-label">研究方向</span>
+				<h2>我主要关注什么</h2>
+				<p>当前工作重点放在生态遥感、多源卫星数据分析、火点监测、土壤侵蚀估算，以及人类活动强度与区域生态变化之间的关系。</p>
+			</section>
+
+			<section class="paper-panel paper-mini-panel">
+				<span class="paper-label">工程能力</span>
+				<h2>我如何把研究做成系统</h2>
+				<p>我更偏向把研究问题工程化处理：用 Python 和 GIS 工具组织数据流程，用 WebGIS 或服务端接口做可复用的系统，再用地图和界面把结果清楚表达出来。</p>
+			</section>
+		</section>
+
+		<section class="paper-panel paper-focus">
+			<span class="paper-label">Current Focus</span>
+			<h2>近期重点</h2>
+			<div class="paper-focus-list">
+				<div class="paper-focus-item">
+					<strong>Himawari-8/9 火点监测</strong>
+					<p>围绕静止气象卫星开展实时火点识别、热异常追踪与自动化处理。</p>
+				</div>
+				<div class="paper-focus-item">
+					<strong>RUSLE / CSLE 土壤侵蚀估算</strong>
+					<p>把模型计算、空间因子组织和区域尺度表达整合进统一分析流程。</p>
+				</div>
+				<div class="paper-focus-item">
+					<strong>WebGIS 与研究型工具</strong>
+					<p>把遥感分析、空间接口和前端表达做成真正可展示、可复用的应用。</p>
+				</div>
 			</div>
 		</section>
 
 		<section class="paper-panel paper-lab">
 			<span class="paper-label">The Lab</span>
 			<h2>Live Demo: 葵花卫星火点实时监测</h2>
-			<p>一个用于展示遥感监测与实时可视化工作流的实验入口。承接长期实验、轻量 Demo 和方法验证。</p>
+			<p>这里会放置我正在推进的实验型项目。相比普通作品展示，我更想把研究思路、处理流程、接口能力和最终表达放在同一个页面里。</p>
 			<a class="paper-lab-link" href="<?php echo esc_url($lab_url); ?>" target="_blank" rel="noreferrer">进入独立实验舱 →</a>
 		</section>
 
@@ -87,14 +124,18 @@ $article_query = new WP_Query(
 	<aside class="paper-sidebar" aria-label="<?php esc_attr_e('Sidebar', 'zqlovegis-theme'); ?>">
 		<section class="paper-panel">
 			<span class="paper-label">Profile</span>
+			<div class="paper-profile-head">
+				<img class="paper-profile-avatar" src="<?php echo esc_url($github_avatar); ?>" alt="Pcoke GitHub Avatar">
+			</div>
 			<h2>Pcoke</h2>
 			<p class="paper-real-name">张琦</p>
-			<p class="paper-bio">太原理工大学 · 测绘工程<br>Undergraduate Researcher</p>
+			<p class="paper-bio">太原理工大学 · 测绘工程<br>本科阶段，关注生态遥感与空间信息工程</p>
 			<div class="paper-tags">
 				<span>Python</span>
 				<span>FastAPI</span>
 				<span>GDAL</span>
 				<span>C#</span>
+				<span>PostgreSQL</span>
 			</div>
 		</section>
 
@@ -112,18 +153,18 @@ $article_query = new WP_Query(
 			<span class="paper-label">Taxonomy</span>
 			<div class="paper-track">
 				<span class="paper-track-id">Track A</span>
-				<strong>遥感算法</strong>
-				<p>RUSLE / CSLE、火点监测、影像处理链路。</p>
+				<strong>生态遥感</strong>
+				<p>围绕火点监测、生态变化识别和多源遥感分析组织研究流程。</p>
 			</div>
 			<div class="paper-track">
 				<span class="paper-track-id">Track B</span>
-				<strong>WebGIS 架构</strong>
-				<p>接口设计、服务拆分、可视化交互与部署。</p>
+				<strong>空间数据工程</strong>
+				<p>用 Python、GDAL、数据库和自动化脚本把数据链路真正跑通。</p>
 			</div>
 			<div class="paper-track">
 				<span class="paper-track-id">Track C</span>
-				<strong>算法平差笔记</strong>
-				<p>测绘基础理论、误差传播、课程复盘与研究记录。</p>
+				<strong>WebGIS 与系统实现</strong>
+				<p>把分析接口、地图表达和前端交互整合成研究型应用。</p>
 			</div>
 		</section>
 	</aside>
