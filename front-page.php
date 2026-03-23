@@ -30,8 +30,8 @@ $article_query = new WP_Query(
 <header class="paper-site-header">
 	<div class="paper-site-header__inner">
 		<div class="paper-site-brand">
-			<p class="paper-site-brand__title">Pcoke 的博客</p>
-			<p class="paper-site-brand__subtitle">张琦 · 关于地图、遥感与代码的个人博客</p>
+			<p class="paper-site-brand__title">山河与像素</p>
+			<p class="paper-site-brand__subtitle">张琦 · 在卫星、地图与代码之间慢慢写</p>
 		</div>
 		<nav class="paper-site-nav" aria-label="<?php esc_attr_e('Primary navigation', 'zqlovegis-theme'); ?>">
 			<a href="<?php echo esc_url(home_url('/')); ?>">首页</a>
@@ -45,7 +45,7 @@ $article_query = new WP_Query(
 <main class="paper-dashboard" aria-label="<?php esc_attr_e('Academic dashboard homepage', 'zqlovegis-theme'); ?>">
 	<section class="paper-main-column">
 		<section class="paper-panel paper-hero">
-			<p class="paper-kicker">Pcoke / zqlovegis.cn</p>
+			<p class="paper-kicker">山河与像素 / zqlovegis.cn</p>
 			<h1>这儿主要写点和地图、遥感、代码有关的东西</h1>
 			<p class="paper-english-desc">A personal blog about GIS, remote sensing, coding, and everyday work.</p>
 			<p class="paper-lead">平时做项目、写代码、处理数据的时候，总会踩到不少坑，也会冒出一些想法。这个站点就是拿来记这些东西的，写得会比较杂一点，但基本都跟 GIS、遥感、WebGIS、Linux 和小工具开发有关。</p>

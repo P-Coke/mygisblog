@@ -21,8 +21,8 @@ $home_url = home_url('/');
 <header class="paper-site-header">
 	<div class="paper-site-header__inner">
 		<div class="paper-site-brand">
-			<p class="paper-site-brand__title">Pcoke 的博客</p>
-			<p class="paper-site-brand__subtitle">张琦 · 关于地图、遥感与代码的个人博客</p>
+			<p class="paper-site-brand__title">山河与像素</p>
+			<p class="paper-site-brand__subtitle">张琦 · 在卫星、地图与代码之间慢慢写</p>
 		</div>
 		<nav class="paper-site-nav" aria-label="<?php esc_attr_e('Primary navigation', 'zqlovegis-theme'); ?>">
 			<a href="<?php echo esc_url($home_url); ?>">首页</a>

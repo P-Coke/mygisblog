@@ -17,11 +17,14 @@ body {
   font-family: "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei UI", sans-serif;
   margin: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)),
+    radial-gradient(circle at 8% 12%, rgba(0, 124, 186, 0.12), transparent 20%),
+    radial-gradient(circle at 88% 10%, rgba(155, 81, 224, 0.1), transparent 18%),
+    radial-gradient(circle at 78% 78%, rgba(46, 164, 79, 0.1), transparent 22%),
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
     linear-gradient(90deg, rgba(9, 17, 31, 0.03) 1px, transparent 1px),
     linear-gradient(rgba(9, 17, 31, 0.03) 1px, transparent 1px);
-  background-size: auto, 36px 36px, 36px 36px;
-  background-position: 0 0, center center, center center;
+  background-size: auto, auto, auto, auto, 36px 36px, 36px 36px;
+  background-position: 0 0, 0 0, 0 0, 0 0, center center, center center;
 }
 
 a {
@@ -61,13 +64,24 @@ img {
 .paper-site-brand__title {
   margin: 0;
   font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: -0.02em;
+  position: relative;
+}
+
+.paper-site-brand__title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 2px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #007cba, rgba(155, 81, 224, 0.75));
 }
 
 .paper-site-brand__subtitle {
-  margin: 4px 0 0;
+  margin: 8px 0 0;
   color: #8190a2;
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.76rem;
@@ -136,8 +150,11 @@ img {
   border: 1px solid #e8e6df;
   border-radius: 8px;
   padding: 32px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.02),
+    0 0 0 1px rgba(255, 255, 255, 0.55) inset;
   position: relative;
+  overflow: hidden;
 }
 
 .paper-panel::before {
@@ -148,6 +165,18 @@ img {
   top: 18px;
   height: 1px;
   background: linear-gradient(90deg, rgba(0, 124, 186, 0.22), rgba(0, 124, 186, 0));
+  pointer-events: none;
+}
+
+.paper-panel::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -72px;
+  top: -72px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 124, 186, 0.08), rgba(0, 124, 186, 0));
   pointer-events: none;
 }
 
@@ -228,9 +257,10 @@ img {
 
 .paper-kicker {
   margin: 0 0 8px;
-  color: #09111f;
+  color: #0f3f5c;
   font-size: 14px;
   font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
 .paper-english-desc {
@@ -278,22 +308,24 @@ img {
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .paper-btn:hover {
-  opacity: 0.8;
+  opacity: 0.95;
+  transform: translateY(-1px);
 }
 
 .paper-btn--primary {
-  background: #09111f;
+  background: linear-gradient(135deg, #0b1a2d 0%, #124a74 100%);
   color: #ffffff;
+  box-shadow: 0 10px 24px rgba(18, 74, 116, 0.22);
 }
 
 .paper-btn--outline {
   border: 1px solid #09111f;
   color: #09111f;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .paper-lab-link {
@@ -318,6 +350,7 @@ img {
   padding: 20px 0;
   border-bottom: 1px solid #e8e6df;
   transition: transform 0.16s ease, background-color 0.16s ease;
+  position: relative;
 }
 
 .paper-article-item:hover {
@@ -377,9 +410,11 @@ img {
   width: 84px;
   height: 84px;
   border-radius: 50%;
-  border: 1px solid #e8e6df;
+  border: 2px solid rgba(255, 255, 255, 0.92);
   object-fit: cover;
-  box-shadow: 0 6px 18px rgba(9, 17, 31, 0.08);
+  box-shadow:
+    0 6px 18px rgba(9, 17, 31, 0.08),
+    0 0 0 1px rgba(0, 124, 186, 0.16);
 }
 
 .paper-bio {
@@ -410,6 +445,7 @@ img {
   width: 100%;
   border-radius: 6px;
   border: 1px solid #eef0f2;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fb 100%);
 }
 
 .paper-track + .paper-track {
