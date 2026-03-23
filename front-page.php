@@ -111,8 +111,12 @@ $article_query = new WP_Query(
 	<aside class="paper-sidebar" aria-label="<?php esc_attr_e('Sidebar', 'zqlovegis-theme'); ?>">
 		<section class="paper-panel">
 			<span class="paper-label">关于我</span>
-			<div class="paper-profile-head">
+			<div class="paper-profile-head paper-profile-head--compact">
 				<img class="paper-profile-avatar" src="<?php echo esc_url($github_avatar); ?>" alt="Pcoke GitHub Avatar">
+				<div class="paper-profile-links">
+					<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
+					<a href="mailto:hello@zqlovegis.cn">邮箱</a>
+				</div>
 			</div>
 			<h2>Pcoke</h2>
 			<p class="paper-real-name">张琦</p>

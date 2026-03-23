@@ -36,8 +36,12 @@ $home_url = home_url('/');
 <main class="paper-about">
 	<section class="paper-panel paper-about-hero">
 		<span class="paper-label">关于</span>
-		<div class="paper-profile-head">
+		<div class="paper-profile-head paper-profile-head--compact">
 			<img class="paper-profile-avatar" src="<?php echo esc_url($github_avatar); ?>" alt="Pcoke GitHub Avatar">
+			<div class="paper-profile-links">
+				<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
+				<a href="mailto:hello@zqlovegis.cn">邮箱</a>
+			</div>
 		</div>
 		<h1>关于我</h1>
 		<p class="paper-lead">我是张琦，平时更常用 Pcoke 这个名字。目前在太原理工大学读测绘工程。这个页面也不想写得太像简历，就当作是把自己这些年慢慢在意起来的东西，安静地摆在这里。</p>
