@@ -30,7 +30,7 @@ $article_query = new WP_Query(
 <header class="paper-site-header">
 	<div class="paper-site-header__inner">
 		<div class="paper-site-brand">
-			<p class="paper-site-brand__title">Pcoke / GIS Notes</p>
+			<p class="paper-site-brand__title">Pcoke 的博客</p>
 			<p class="paper-site-brand__subtitle">张琦 · 关于地图、遥感与代码的个人博客</p>
 		</div>
 		<nav class="paper-site-nav" aria-label="<?php esc_attr_e('Primary navigation', 'zqlovegis-theme'); ?>">
@@ -49,6 +49,7 @@ $article_query = new WP_Query(
 			<h1>这儿主要写点和地图、遥感、代码有关的东西</h1>
 			<p class="paper-english-desc">A personal blog about GIS, remote sensing, coding, and everyday work.</p>
 			<p class="paper-lead">平时做项目、写代码、处理数据的时候，总会踩到不少坑，也会冒出一些想法。这个站点就是拿来记这些东西的，写得会比较杂一点，但基本都跟 GIS、遥感、WebGIS、Linux 和小工具开发有关。</p>
+			<p class="paper-hero-note">有些文章会偏技术细节，有些会更像工作笔记，更新节奏不一定固定，但尽量都写自己真正做过的内容。</p>
 			<div class="paper-action-buttons">
 				<a class="paper-btn paper-btn--primary" href="#articles">进入文章</a>
 				<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($about_url); ?>">了解我</a>
@@ -60,12 +61,14 @@ $article_query = new WP_Query(
 				<span class="paper-label">最近在看</span>
 				<h2>这段时间主要折腾什么</h2>
 				<p>最近花得比较多的时间还是在生态遥感、多源卫星数据、火点监测，还有土壤侵蚀估算这些方向上。有些是课程和研究里的东西，有些是自己真感兴趣想继续往下挖的。</p>
+				<p class="paper-mini-meta">大多还是和卫星数据、空间分析、研究里的具体问题有关。</p>
 			</section>
 
 			<section class="paper-panel paper-mini-panel">
 				<span class="paper-label">平时怎么做</span>
 				<h2>我更习惯边做边记</h2>
 				<p>我不太喜欢把东西只停在“跑通一次”这个阶段。能整理成脚本的就整理成脚本，能做成接口或小工具的就继续往下做，顺手把过程记下来，后面自己回头看也方便。</p>
+				<p class="paper-mini-meta">所以这里会有代码、流程、地图，也会有一些不那么正式的碎碎念。</p>
 			</section>
 		</section>
 
@@ -130,6 +133,7 @@ $article_query = new WP_Query(
 			<h2>Pcoke</h2>
 			<p class="paper-real-name">张琦</p>
 			<p class="paper-bio">太原理工大学 · 测绘工程<br>平时主要在遥感、GIS 和开发之间来回切换</p>
+			<p class="paper-profile-note">更喜欢把事情做成能复用、能继续改、也能讲清楚的东西。</p>
 			<div class="paper-tags">
 				<span>Python</span>
 				<span>FastAPI</span>

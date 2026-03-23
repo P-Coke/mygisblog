@@ -21,7 +21,7 @@ $home_url = home_url('/');
 <header class="paper-site-header">
 	<div class="paper-site-header__inner">
 		<div class="paper-site-brand">
-			<p class="paper-site-brand__title">Pcoke / GIS Notes</p>
+			<p class="paper-site-brand__title">Pcoke 的博客</p>
 			<p class="paper-site-brand__subtitle">张琦 · 关于地图、遥感与代码的个人博客</p>
 		</div>
 		<nav class="paper-site-nav" aria-label="<?php esc_attr_e('Primary navigation', 'zqlovegis-theme'); ?>">
@@ -41,6 +41,7 @@ $home_url = home_url('/');
 		</div>
 		<h1>关于我</h1>
 		<p class="paper-lead">我是张琦，平时更常用 Pcoke 这个名字。目前在太原理工大学读测绘工程。这个页面不想写得太像简历，就简单说说我平时在做什么、在关心什么。</p>
+		<p class="paper-hero-note">如果首页更像随手写下来的笔记，这一页就算是稍微正式一点的自我说明。</p>
 	</section>
 
 	<section class="paper-about-grid">
