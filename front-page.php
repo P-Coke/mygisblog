@@ -101,7 +101,7 @@ $article_query = new WP_Query(
 			</div>
 			<h2>Pcoke</h2>
 			<p class="paper-real-name">张琦</p>
-			<p class="paper-bio">太原理工大学 · 测绘工程<br>平时在遥感、GIS 和开发之间慢慢来回走</p>
+			<p class="paper-bio">太原理工大学 · 测绘工程</p>
 			<p class="paper-profile-note">比起把事情做完，我更在意它能不能留下来，能不能继续被修改，能不能说得明白。</p>
 			<div class="paper-tags">
 				<span>Python</span>
