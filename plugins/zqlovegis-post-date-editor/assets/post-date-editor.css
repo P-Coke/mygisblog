@@ -1,0 +1,87 @@
+.zq-post-date-tools {
+  margin-top: 8px;
+}
+
+.zq-post-date-trigger {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #2271b1;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.4;
+  text-decoration: underline;
+}
+
+.zq-post-date-trigger:hover {
+  color: #135e96;
+}
+
+.zq-post-date-trigger[disabled] {
+  color: #6b7280;
+  cursor: default;
+  text-decoration: none;
+}
+
+.zq-post-date-editor-root {
+  position: absolute;
+  z-index: 100000;
+}
+
+.zq-post-date-editor-card {
+  width: min(320px, calc(100vw - 40px));
+  padding: 16px;
+  border: 1px solid #dcdcde;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+}
+
+.zq-post-date-editor-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.zq-post-date-editor-head strong {
+  font-size: 13px;
+}
+
+.zq-post-date-close {
+  border: 0;
+  background: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+.zq-post-date-title {
+  margin: 10px 0 14px;
+  color: #1f2937;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.zq-post-date-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.zq-post-date-field span {
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.zq-post-date-field input {
+  width: 100%;
+}
+
+.zq-post-date-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}

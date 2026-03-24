@@ -49,8 +49,17 @@ add_action('wp_enqueue_scripts', function () {
 	}
 });
 
+function zqlovegis_get_favicon_url(): string
+{
+	$path = get_theme_file_path('assets/images/favicon.svg');
+	$uri = get_theme_file_uri('assets/images/favicon.svg');
+	$version = file_exists($path) ? (string) filemtime($path) : wp_get_theme()->get('Version');
+
+	return add_query_arg('v', $version, $uri);
+}
+
 add_filter('get_site_icon_url', function ($url) {
-	return get_theme_file_uri('assets/images/favicon.svg');
+	return zqlovegis_get_favicon_url();
 });
 
 add_filter('document_title_parts', function ($parts) {
