@@ -79,7 +79,7 @@ function zqlovegis_get_github_profile(): array
 	$fallback = [
 		'login'      => 'P-Coke',
 		'name'       => 'Pcoke',
-		'bio'        => '在卫星、地图与代码之间慢慢写。',
+		'bio'        => '在地图、影像和代码之间慢慢写。',
 		'html_url'   => 'https://github.com/P-Coke',
 		'avatar_url' => 'https://github.com/P-Coke.png?size=240',
 	];
@@ -216,7 +216,7 @@ function zqlovegis_render_site_header(string $current = ''): void
 		<div class="paper-site-header__inner">
 			<div class="paper-site-brand">
 				<p class="paper-site-brand__title">山河与像素</p>
-				<p class="paper-site-brand__subtitle">在卫星、地图与代码之间慢慢写</p>
+				<p class="paper-site-brand__subtitle">在地图、影像和代码之间慢慢写</p>
 			</div>
 			<nav class="paper-site-nav" aria-label="<?php esc_attr_e('Primary navigation', 'zqlovegis-theme'); ?>">
 				<a class="<?php echo $current === 'home' ? 'is-active' : ''; ?>" href="<?php echo esc_url(home_url('/')); ?>">首页</a>
