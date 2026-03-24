@@ -4,8 +4,9 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-$github_url = 'https://github.com/P-Coke';
-$github_avatar = 'https://github.com/P-Coke.png?size=240';
+$github_profile = zqlovegis_get_github_profile();
+$github_url = $github_profile['html_url'];
+$github_avatar = $github_profile['avatar_url'];
 $home_url = home_url('/');
 ?>
 <!doctype html>
@@ -23,13 +24,13 @@ $home_url = home_url('/');
 	<section class="paper-panel paper-about-hero">
 		<span class="paper-label">关于</span>
 		<div class="paper-profile-head paper-profile-head--compact">
-			<img class="paper-profile-avatar" src="<?php echo esc_url($github_avatar); ?>" alt="Pcoke GitHub Avatar">
+			<img class="paper-profile-avatar" src="<?php echo esc_url($github_avatar); ?>" alt="<?php echo esc_attr($github_profile['name']); ?> GitHub Avatar">
 			<div class="paper-profile-links">
 				<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">
 					<?php echo zqlovegis_render_icon('github'); ?>
 					<span class="paper-profile-link-text">
 						<strong>GitHub</strong>
-						<small>github.com/P-Coke</small>
+						<small><?php echo esc_html(preg_replace('#^https?://#', '', $github_url)); ?></small>
 					</span>
 				</a>
 				<a href="mailto:zq.2004@outlook.com">

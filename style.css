@@ -317,6 +317,9 @@ img {
 
 .paper-hero-figure {
   margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
 }
 
 .paper-hero-map-shell {
@@ -330,6 +333,8 @@ img {
   box-shadow:
     0 8px 20px rgba(9, 17, 31, 0.08),
     inset 0 0 0 1px rgba(255, 255, 255, 0.38);
+  isolation: isolate;
+  z-index: 1;
 }
 
 .paper-hero-map {
@@ -366,7 +371,7 @@ img {
 
 .paper-hero-body {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   padding: 2px 2px 0;
 }
 
@@ -374,14 +379,14 @@ img {
   position: absolute;
   left: 16px;
   bottom: 16px;
-  z-index: 420;
-  max-width: 220px;
-  padding: 12px 14px;
+  z-index: 4;
+  max-width: 210px;
+  padding: 10px 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 14px;
-  background: rgba(246, 244, 239, 0.22);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 20px rgba(9, 17, 31, 0.12);
+  background: rgba(246, 244, 239, 0.18);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 18px rgba(9, 17, 31, 0.1);
   color: #f7fafc;
 }
 

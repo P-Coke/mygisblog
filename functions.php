@@ -65,6 +65,56 @@ add_filter('document_title_parts', function ($parts) {
 	return $parts;
 });
 
+function zqlovegis_get_github_profile(): array
+{
+	$fallback = [
+		'login'      => 'P-Coke',
+		'name'       => 'Pcoke',
+		'bio'        => '在卫星、地图与代码之间慢慢写。',
+		'html_url'   => 'https://github.com/P-Coke',
+		'avatar_url' => 'https://github.com/P-Coke.png?size=240',
+	];
+
+	$cached = get_transient('zqlovegis_github_profile');
+
+	if (is_array($cached) && !empty($cached['html_url'])) {
+		return array_merge($fallback, $cached);
+	}
+
+	$response = wp_remote_get(
+		'https://api.github.com/users/P-Coke',
+		[
+			'timeout' => 12,
+			'headers' => [
+				'Accept'     => 'application/vnd.github+json',
+				'User-Agent' => 'zqlovegis-theme',
+			],
+		]
+	);
+
+	if (is_wp_error($response)) {
+		return $fallback;
+	}
+
+	$payload = json_decode((string) wp_remote_retrieve_body($response), true);
+
+	if (!is_array($payload) || empty($payload['html_url'])) {
+		return $fallback;
+	}
+
+	$profile = [
+		'login'      => $payload['login'] ?? $fallback['login'],
+		'name'       => $payload['name'] ?: $fallback['name'],
+		'bio'        => $payload['bio'] ?: $fallback['bio'],
+		'html_url'   => $payload['html_url'] ?? $fallback['html_url'],
+		'avatar_url' => !empty($payload['avatar_url']) ? add_query_arg('size', '240', $payload['avatar_url']) : $fallback['avatar_url'],
+	];
+
+	set_transient('zqlovegis_github_profile', $profile, 12 * HOUR_IN_SECONDS);
+
+	return $profile;
+}
+
 function zqlovegis_render_icon(string $name): string
 {
 	$icons = [
