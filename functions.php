@@ -124,6 +124,59 @@ function zqlovegis_get_github_profile(): array
 	return $profile;
 }
 
+function zqlovegis_get_github_repos(int $limit = 6): array
+{
+	$limit = max(2, min($limit, 12));
+	$fallback = [];
+	$cache_key = 'zqlovegis_github_repos_' . $limit;
+	$cached = get_transient($cache_key);
+
+	if (is_array($cached)) {
+		return $cached;
+	}
+
+	$response = wp_remote_get(
+		'https://api.github.com/users/P-Coke/repos?sort=updated&direction=desc&per_page=' . $limit,
+		[
+			'timeout' => 12,
+			'headers' => [
+				'Accept'     => 'application/vnd.github+json',
+				'User-Agent' => 'zqlovegis-theme',
+			],
+		]
+	);
+
+	if (is_wp_error($response)) {
+		return $fallback;
+	}
+
+	$payload = json_decode((string) wp_remote_retrieve_body($response), true);
+
+	if (!is_array($payload)) {
+		return $fallback;
+	}
+
+	$repos = [];
+
+	foreach ($payload as $repo) {
+		if (!is_array($repo) || empty($repo['html_url']) || !empty($repo['fork'])) {
+			continue;
+		}
+
+		$repos[] = [
+			'name'        => $repo['name'] ?? '',
+			'description' => $repo['description'] ?? '',
+			'html_url'    => $repo['html_url'],
+			'language'    => $repo['language'] ?? '',
+			'stars'       => isset($repo['stargazers_count']) ? (int) $repo['stargazers_count'] : 0,
+		];
+	}
+
+	set_transient($cache_key, $repos, 6 * HOUR_IN_SECONDS);
+
+	return $repos;
+}
+
 function zqlovegis_render_icon(string $name): string
 {
 	$icons = [

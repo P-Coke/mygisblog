@@ -5,6 +5,7 @@ if (!defined('ABSPATH')) {
 }
 
 $github_profile = zqlovegis_get_github_profile();
+$github_repos = zqlovegis_get_github_repos(6);
 $github_url = $github_profile['html_url'];
 $github_avatar = $github_profile['avatar_url'];
 $lab_url = 'https://github.com/P-Coke';
@@ -138,6 +139,51 @@ $article_query = new WP_Query(
 			<a class="paper-github-card paper-github-card--link" href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">
 				<img src="/api/github-top-langs" alt="GitHub Top Languages">
 			</a>
+			<?php if (!empty($github_repos)) : ?>
+				<div class="paper-github-repos">
+					<div class="paper-github-repos__head">
+						<strong>开源项目</strong>
+						<small>默认显示 2 个</small>
+					</div>
+					<div class="paper-github-repo-list">
+						<?php foreach (array_slice($github_repos, 0, 2) as $repo) : ?>
+							<a class="paper-github-repo" href="<?php echo esc_url($repo['html_url']); ?>" target="_blank" rel="noreferrer">
+								<span class="paper-github-repo__title"><?php echo esc_html($repo['name']); ?></span>
+								<?php if (!empty($repo['description'])) : ?>
+									<span class="paper-github-repo__desc"><?php echo esc_html(wp_trim_words($repo['description'], 16, '...')); ?></span>
+								<?php endif; ?>
+								<div class="paper-github-repo__meta">
+									<?php if (!empty($repo['language'])) : ?>
+										<span><?php echo esc_html($repo['language']); ?></span>
+									<?php endif; ?>
+									<span>★ <?php echo esc_html((string) $repo['stars']); ?></span>
+								</div>
+							</a>
+						<?php endforeach; ?>
+					</div>
+					<?php if (count($github_repos) > 2) : ?>
+						<details class="paper-github-repos__more">
+							<summary>展开全部</summary>
+							<div class="paper-github-repo-list paper-github-repo-list--more">
+								<?php foreach (array_slice($github_repos, 2) as $repo) : ?>
+									<a class="paper-github-repo" href="<?php echo esc_url($repo['html_url']); ?>" target="_blank" rel="noreferrer">
+										<span class="paper-github-repo__title"><?php echo esc_html($repo['name']); ?></span>
+										<?php if (!empty($repo['description'])) : ?>
+											<span class="paper-github-repo__desc"><?php echo esc_html(wp_trim_words($repo['description'], 16, '...')); ?></span>
+										<?php endif; ?>
+										<div class="paper-github-repo__meta">
+											<?php if (!empty($repo['language'])) : ?>
+												<span><?php echo esc_html($repo['language']); ?></span>
+											<?php endif; ?>
+											<span>★ <?php echo esc_html((string) $repo['stars']); ?></span>
+										</div>
+									</a>
+								<?php endforeach; ?>
+							</div>
+						</details>
+					<?php endif; ?>
+				</div>
+			<?php endif; ?>
 		</section>
 
 		<section class="paper-panel">

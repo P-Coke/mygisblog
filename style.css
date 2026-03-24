@@ -802,6 +802,92 @@ img {
   background: linear-gradient(180deg, #ffffff 0%, #f7f9fb 100%);
 }
 
+.paper-github-repos {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #eef0f2;
+}
+
+.paper-github-repos__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.paper-github-repos__head strong {
+  font-size: 0.92rem;
+}
+
+.paper-github-repos__head small {
+  color: #8190a2;
+  font-size: 0.72rem;
+}
+
+.paper-github-repo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.paper-github-repo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 12px;
+  border: 1px solid #e8e6df;
+  border-radius: 10px;
+  background: #fafafa;
+  text-decoration: none;
+  transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.paper-github-repo:hover {
+  transform: translateY(-1px);
+  border-color: rgba(0, 124, 186, 0.28);
+  background: #ffffff;
+}
+
+.paper-github-repo__title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #09111f;
+}
+
+.paper-github-repo__desc {
+  color: #555555;
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+
+.paper-github-repo__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #8190a2;
+  font-size: 0.72rem;
+}
+
+.paper-github-repos__more {
+  margin-top: 10px;
+}
+
+.paper-github-repos__more summary {
+  cursor: pointer;
+  color: #0f3f5c;
+  font-size: 0.82rem;
+  list-style: none;
+}
+
+.paper-github-repos__more summary::-webkit-details-marker {
+  display: none;
+}
+
+.paper-github-repo-list--more {
+  margin-top: 10px;
+}
+
 .paper-track + .paper-track {
   margin-top: 16px;
 }
