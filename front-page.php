@@ -145,7 +145,7 @@ $article_query = new WP_Query(
 			<span class="paper-label">会写到的东西</span>
 			<div class="paper-track">
 				<span class="paper-track-id">一</span>
-				<strong>生态遥感</strong>
+				<strong>遥感</strong>
 				<p>像火点监测、多源遥感数据处理、生态变化分析这些内容，后面多半会反复出现。</p>
 			</div>
 			<div class="paper-track">
