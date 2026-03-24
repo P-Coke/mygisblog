@@ -143,7 +143,6 @@ $article_query = new WP_Query(
 				<div class="paper-github-repos">
 					<div class="paper-github-repos__head">
 						<strong>开源项目</strong>
-						<small>默认显示 2 个</small>
 					</div>
 					<div class="paper-github-repo-list">
 						<?php foreach (array_slice($github_repos, 0, 2) as $repo) : ?>
