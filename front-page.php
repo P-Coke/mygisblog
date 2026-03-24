@@ -31,23 +31,23 @@ $article_query = new WP_Query(
 <main class="paper-dashboard" aria-label="<?php esc_attr_e('Academic dashboard homepage', 'zqlovegis-theme'); ?>">
 	<section class="paper-main-column">
 		<section class="paper-panel paper-hero">
-			<div class="paper-hero-map-shell">
-				<div id="paper-hero-map" class="paper-hero-map" aria-hidden="true"></div>
-				<div class="paper-hero-overlay">
-					<div class="paper-hero-copy-card">
-					<p class="paper-kicker">山河与像素 / zqlovegis.cn</p>
-					<h1>把地图、影像和代码，慢慢记下来</h1>
-					<p class="paper-english-desc">Notes on maps, imagery, code, and the work between them.</p>
-					<p class="paper-lead">写地图，记影像，也记那些在代码里绕了很久才慢慢想明白的东西。</p>
-						<div class="paper-action-buttons">
-							<a class="paper-btn paper-btn--primary" href="#articles">进入文章</a>
-							<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($about_url); ?>">了解我</a>
-						</div>
-					</div>
+			<div class="paper-hero-figure">
+				<div class="paper-hero-map-shell">
+					<div id="paper-hero-map" class="paper-hero-map" aria-hidden="true"></div>
 					<div class="paper-map-window" aria-label="地图标注">
 						<span class="paper-map-window__eyebrow">Imagery</span>
 						<strong>Taiyuan University of Technology</strong>
 					</div>
+				</div>
+			</div>
+			<div class="paper-hero-body">
+				<p class="paper-kicker">山河与像素 / zqlovegis.cn</p>
+				<h1>把地图、影像和代码，慢慢记下来</h1>
+				<p class="paper-english-desc">Notes on maps, imagery, code, and the work between them.</p>
+				<p class="paper-lead">写地图，记影像，也记那些在代码里绕了很久才慢慢想明白的东西。</p>
+				<div class="paper-action-buttons">
+					<a class="paper-btn paper-btn--primary" href="#articles">进入文章</a>
+					<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($about_url); ?>">了解我</a>
 				</div>
 			</div>
 		</section>
