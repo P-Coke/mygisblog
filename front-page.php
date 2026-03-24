@@ -8,7 +8,6 @@ $github_profile = zqlovegis_get_github_profile();
 $github_url = $github_profile['html_url'];
 $github_avatar = $github_profile['avatar_url'];
 $lab_url = 'https://github.com/P-Coke';
-$about_url = home_url('/about/');
 
 $article_query = new WP_Query(
 	[
@@ -48,7 +47,7 @@ $article_query = new WP_Query(
 				<p class="paper-lead">写地图，记影像，也记那些在代码里绕了很久才慢慢想明白的东西。</p>
 				<div class="paper-action-buttons">
 					<a class="paper-btn paper-btn--primary" href="#articles">进入文章</a>
-					<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($about_url); ?>">了解我</a>
+					<a class="paper-btn paper-btn--outline" href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
 				</div>
 			</div>
 		</section>
@@ -133,12 +132,12 @@ $article_query = new WP_Query(
 
 		<section class="paper-panel">
 			<span class="paper-label">GitHub</span>
-			<div class="paper-github-card">
+			<a class="paper-github-card paper-github-card--link" href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">
 				<img src="/api/github-stats" alt="GitHub Statistics">
-			</div>
-			<div class="paper-github-card">
+			</a>
+			<a class="paper-github-card paper-github-card--link" href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">
 				<img src="/api/github-top-langs" alt="GitHub Top Languages">
-			</div>
+			</a>
 		</section>
 
 		<section class="paper-panel">

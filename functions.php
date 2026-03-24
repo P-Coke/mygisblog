@@ -156,7 +156,6 @@ function zqlovegis_render_skill_badge(string $icon, string $label): string
 
 function zqlovegis_render_site_header(string $current = ''): void
 {
-	$about_url = home_url('/about/');
 	$articles_url = home_url('/#articles');
 	$github_url = 'https://github.com/P-Coke';
 	?>
@@ -168,7 +167,6 @@ function zqlovegis_render_site_header(string $current = ''): void
 			</div>
 			<nav class="paper-site-nav" aria-label="<?php esc_attr_e('Primary navigation', 'zqlovegis-theme'); ?>">
 				<a class="<?php echo $current === 'home' ? 'is-active' : ''; ?>" href="<?php echo esc_url(home_url('/')); ?>">首页</a>
-				<a class="<?php echo $current === 'about' ? 'is-active' : ''; ?>" href="<?php echo esc_url($about_url); ?>">关于</a>
 				<a class="<?php echo $current === 'articles' ? 'is-active' : ''; ?>" href="<?php echo esc_url($articles_url); ?>">文章</a>
 				<a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noreferrer">GitHub</a>
 			</nav>
