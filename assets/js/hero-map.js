@@ -18,6 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
     tap: true
   }).setView(center, 17);
 
+  L.control.zoom({
+    position: 'bottomright'
+  }).addTo(map);
+
+  const NorthControl = L.Control.extend({
+    options: {
+      position: 'topright'
+    },
+    onAdd() {
+      const container = L.DomUtil.create('div', 'paper-map-north-control');
+      container.innerHTML = '<span class="paper-map-north-control__arrow" aria-hidden="true"></span><span class="paper-map-north-control__label">北</span>';
+      L.DomEvent.disableClickPropagation(container);
+      L.DomEvent.disableScrollPropagation(container);
+      return container;
+    }
+  });
+
+  new NorthControl().addTo(map);
+
   L.tileLayer(
     'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     {

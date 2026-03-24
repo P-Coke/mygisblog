@@ -12,19 +12,18 @@ Text Domain: zqlovegis-theme
 */
 
 body {
-  background: #f6f4ef;
+  background: #f4f3ee;
   color: #09111f;
   font-family: "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei UI", sans-serif;
   margin: 0;
   background-image:
-    radial-gradient(circle at 8% 12%, rgba(0, 124, 186, 0.12), transparent 20%),
-    radial-gradient(circle at 88% 10%, rgba(155, 81, 224, 0.1), transparent 18%),
-    radial-gradient(circle at 78% 78%, rgba(46, 164, 79, 0.1), transparent 22%),
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    linear-gradient(90deg, rgba(9, 17, 31, 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(9, 17, 31, 0.03) 1px, transparent 1px);
-  background-size: auto, auto, auto, auto, 36px 36px, 36px 36px;
-  background-position: 0 0, 0 0, 0 0, 0 0, center center, center center;
+    radial-gradient(circle at 12% 14%, rgba(66, 122, 161, 0.06), transparent 22%),
+    radial-gradient(circle at 86% 11%, rgba(123, 111, 171, 0.05), transparent 18%),
+    radial-gradient(circle at 74% 82%, rgba(107, 141, 117, 0.045), transparent 18%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.42)),
+    linear-gradient(135deg, rgba(9, 17, 31, 0.012) 25%, transparent 25%, transparent 50%, rgba(9, 17, 31, 0.012) 50%, rgba(9, 17, 31, 0.012) 75%, transparent 75%, transparent);
+  background-size: auto, auto, auto, auto, 22px 22px;
+  background-position: 0 0, 0 0, 0 0, 0 0, center center;
 }
 
 a {
@@ -37,7 +36,7 @@ img {
 }
 
 .paper-dashboard-page {
-  background: #f6f4ef;
+  background: #f4f3ee;
 }
 
 .paper-site-header,
@@ -405,6 +404,76 @@ img {
   font-size: 0.88rem;
   line-height: 1.35;
   font-weight: 600;
+}
+
+.paper-hero-map-shell .leaflet-control-container .leaflet-top,
+.paper-hero-map-shell .leaflet-control-container .leaflet-bottom {
+  pointer-events: none;
+}
+
+.paper-hero-map-shell .leaflet-control {
+  pointer-events: auto;
+  margin: 12px;
+}
+
+.paper-hero-map-shell .leaflet-control-zoom {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(9, 17, 31, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.paper-hero-map-shell .leaflet-control-zoom a {
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  border: 0;
+  background: rgba(246, 244, 239, 0.22);
+  color: #f7fafc;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.paper-hero-map-shell .leaflet-control-zoom a:hover,
+.paper-hero-map-shell .leaflet-control-zoom a:focus {
+  background: rgba(246, 244, 239, 0.3);
+  color: #ffffff;
+}
+
+.paper-hero-map-shell .leaflet-control-zoom a + a {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.paper-map-north-control {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 36px;
+  padding: 9px 8px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 14px;
+  background: rgba(246, 244, 239, 0.22);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 18px rgba(9, 17, 31, 0.1);
+  color: #f7fafc;
+}
+
+.paper-map-north-control__arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid rgba(255, 255, 255, 0.94);
+  filter: drop-shadow(0 1px 0 rgba(15, 63, 92, 0.32));
+}
+
+.paper-map-north-control__label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
 }
 
 .paper-map-frame {
@@ -1210,6 +1279,10 @@ img {
     right: 12px;
     bottom: 12px;
     max-width: none;
+  }
+
+  .paper-hero-map-shell .leaflet-control {
+    margin: 10px;
   }
 
   .paper-article-item {
