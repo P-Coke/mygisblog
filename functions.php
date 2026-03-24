@@ -136,7 +136,7 @@ function zqlovegis_get_github_repos(int $limit = 6): array
 	}
 
 	$response = wp_remote_get(
-		'https://api.github.com/users/P-Coke/repos?sort=updated&direction=desc&per_page=' . $limit,
+		'https://api.github.com/search/repositories?q=user:P-Coke+fork:false&sort=stars&order=desc&per_page=' . $limit,
 		[
 			'timeout' => 12,
 			'headers' => [
@@ -151,14 +151,15 @@ function zqlovegis_get_github_repos(int $limit = 6): array
 	}
 
 	$payload = json_decode((string) wp_remote_retrieve_body($response), true);
+	$items = is_array($payload) && isset($payload['items']) && is_array($payload['items']) ? $payload['items'] : null;
 
-	if (!is_array($payload)) {
+	if (!is_array($items)) {
 		return $fallback;
 	}
 
 	$repos = [];
 
-	foreach ($payload as $repo) {
+	foreach ($items as $repo) {
 		if (!is_array($repo) || empty($repo['html_url']) || !empty($repo['fork'])) {
 			continue;
 		}
@@ -169,19 +170,8 @@ function zqlovegis_get_github_repos(int $limit = 6): array
 			'html_url'    => $repo['html_url'],
 			'language'    => $repo['language'] ?? '',
 			'stars'       => isset($repo['stargazers_count']) ? (int) $repo['stargazers_count'] : 0,
-			'updated_at'  => $repo['updated_at'] ?? '',
 		];
 	}
-
-	usort($repos, static function (array $left, array $right): int {
-		$stars_compare = $right['stars'] <=> $left['stars'];
-
-		if ($stars_compare !== 0) {
-			return $stars_compare;
-		}
-
-		return strcmp((string) $right['updated_at'], (string) $left['updated_at']);
-	});
 
 	set_transient($cache_key, $repos, 6 * HOUR_IN_SECONDS);
 
