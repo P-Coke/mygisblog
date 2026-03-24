@@ -169,8 +169,19 @@ function zqlovegis_get_github_repos(int $limit = 6): array
 			'html_url'    => $repo['html_url'],
 			'language'    => $repo['language'] ?? '',
 			'stars'       => isset($repo['stargazers_count']) ? (int) $repo['stargazers_count'] : 0,
+			'updated_at'  => $repo['updated_at'] ?? '',
 		];
 	}
+
+	usort($repos, static function (array $left, array $right): int {
+		$stars_compare = $right['stars'] <=> $left['stars'];
+
+		if ($stars_compare !== 0) {
+			return $stars_compare;
+		}
+
+		return strcmp((string) $right['updated_at'], (string) $left['updated_at']);
+	});
 
 	set_transient($cache_key, $repos, 6 * HOUR_IN_SECONDS);
 
