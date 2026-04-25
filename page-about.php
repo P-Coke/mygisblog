@@ -52,7 +52,7 @@ $home_url = home_url('/');
 			<span class="paper-label">我在关注</span>
 			<h2>研究兴趣</h2>
 			<div class="paper-track">
-				<strong>生态遥感</strong>
+				<strong>遥感</strong>
 				<p>我一直挺喜欢卫星数据这种东西。它们一头连着天空，一头连着地面，最后还会落到具体的问题里，而不只是停在图像本身。</p>
 			</div>
 			<div class="paper-track">
